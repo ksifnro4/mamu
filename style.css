@@ -1,0 +1,205 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* 汎用コンテナ */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ヘッダー上部全体 */
+.header-top {
+  width: 100%;
+  background: #fff;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+/* 内側の中央寄せラッパー */
+.header-top-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ロゴまわり */
+.logo-area {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  height: 60px;
+  margin-right: 10px;
+}
+.logo-text {
+  margin: 0;
+  font-size: 20px;
+}
+.catch {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* 連絡先エリア */
+.contact-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.line-box {
+  display: flex;
+  align-items: center;
+}
+.qr {
+  height: 60px;
+  margin-right: 8px;
+}
+.phone-box .tel {
+  font-size: 20px;
+  font-weight: bold;
+}
+.phone-box .time, .small-text {
+  font-size: 12px;
+}
+
+/* ナビゲーションバー */
+.nav-bar {
+  width: 100%;
+  background-color: #111;
+}
+.nav-bar ul {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+}
+.nav-bar li {
+  margin: 0 15px;
+}
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+/* その他スタイル */
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.tel {
+  font-size: 1.2em;
+}
+.hero {
+  background: #ccc;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+.hero h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.btn {
+  background: #e60012;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 1.1em;
+}
+.merits, .services, .contact {
+  background: #f9f9f9;
+  text-align: center;
+  padding: 40px 20px;
+}
+.merit-boxes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.box {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  width: 30%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+.services li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+.footer {
+  background: #ffb9f6;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.company-table th, .company-table td {
+  border: 1px solid #ccc;
+  padding: 12px;
+  text-align: left;
+}
+
+.company-table th {
+  width: 30%;
+  background-color: #f7f7f7;
+}
+
+
+
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 768px) {
+  .header-top-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+  .logo, .tel {
+    margin: 10px 0;
+  }
+  .hero {
+    padding: 60px 15px;
+  }
+  .hero h2 {
+    font-size: 1.5em;
+  }
+  .merit-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    width: 90%;
+  }
+  .btn {
+    font-size: 1em;
+    padding: 10px 20px;
+  }
+}
