@@ -14,6 +14,11 @@ body {
 }
 
 /* ヘッダー上部全体 */
+.header {
+  position: relative;
+  /* 他のスタイル */
+}
+
 .header-top {
   width: 100%;
   background: #fff;
@@ -23,15 +28,64 @@ body {
 
 /* 内側の中央寄せラッパー */
 .header-top-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
 }
 
 /* ロゴまわり */
+
+/* スマホ時はロゴ画像だけ表示 */
+@media screen and (max-width: 600px) {
+  .header-top-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    gap: 8px;
+  }
+
+  .logo-area {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+
+  .contact-area {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .logo-text,
+  .catch,
+  .line-text,
+  .small-text,
+  .tel,
+  .time {
+    display: none !important;
+  }
+
+  .logo-img,
+  .tel-icon,
+  .qr {
+    height: 32px;
+    width: auto;
+    margin: 0;
+    display: block;
+  }
+
+  .nav-toggle {
+    position: static;
+    margin-left: 8px;
+  }
+}
+
 .logo-area {
   display: flex;
   align-items: center;
@@ -146,6 +200,84 @@ body {
   text-decoration: underline;
 }
 
+/* ハンバーガーメニューアイコン */
+.nav-toggle {
+  display: none;
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 6px auto;
+  background: #333;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+/* スマホだけ表示 */
+.sp-only {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .sp-only {
+    display: block;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-bar {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  .nav-bar.open {
+    right: 0;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nav-bar li {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nav-bar a {
+    display: block;
+    padding: 18px 24px;
+    border-bottom: 1px solid #eee;
+    font-size: 1.1em;
+    color: #333;
+  }
+
+  .nav-bar a:last-child {
+    border-bottom: none;
+  }
+}
+
 /* その他スタイル */
 .logo {
   font-size: 1.6em;
@@ -169,39 +301,6 @@ body {
   width: 100%;
   height: auto;
   display: block;
-}
-
-.hero-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* 背景が明るい場合は下記で文字を見やすく */
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  pointer-events: none;
-  /* ボタンを押したい場合はこの行を削除 */
-}
-
-.hero-content .btn {
-  pointer-events: auto;
-  /* ボタンだけクリック可能に */
-}
-
-.hero h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  text-align: center;
-  /* 追加：中央揃え */
-  width: 100%;
-  /* 追加：横幅いっぱい */
-  display: block;
-  /* 追加：ブロック要素として扱う */
 }
 
 .btn {
@@ -290,16 +389,28 @@ body {
   border-radius: 12px;
   padding: 20px 10px;
   width: 25%;
-  /* 4つで100% */
   min-width: 0;
-  /* はみ出し防止 */
   max-width: none;
-  /* 最大幅制限解除 */
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  /* 追加: リンクの下線を消す */
+  color: inherit;
+  /* 追加: 文字色を継承 */
+  transition: box-shadow 0.2s, transform 0.2s;
+  /* 追加: ホバーアニメ */
+  cursor: pointer;
+  /* 追加: カーソルをポインタに */
+}
+
+.plan-summary-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  /* 追加: ホバー時の影 */
+  transform: translateY(-4px) scale(1.03);
+  /* 追加: ホバー時の拡大 */
 }
 
 .plan-summary-card h3 {
