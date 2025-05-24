@@ -157,15 +157,50 @@ body {
 }
 
 .hero {
-  background: #ccc;
-  color: white;
+  position: relative;
   text-align: center;
-  padding: 80px 20px;
+  overflow: hidden;
+  padding: 0;
+  /* 画像の高さで調整するのでpadding不要 */
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* 背景が明るい場合は下記で文字を見やすく */
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  /* ボタンを押したい場合はこの行を削除 */
+}
+
+.hero-content .btn {
+  pointer-events: auto;
+  /* ボタンだけクリック可能に */
 }
 
 .hero h2 {
   font-size: 2em;
   margin-bottom: 10px;
+  text-align: center;
+  /* 追加：中央揃え */
+  width: 100%;
+  /* 追加：横幅いっぱい */
+  display: block;
+  /* 追加：ブロック要素として扱う */
 }
 
 .btn {
@@ -235,6 +270,81 @@ body {
 .company-table th {
   width: 30%;
   background-color: #f7f7f7;
+}
+
+/*index plan*/
+
+.plan-summary-list {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* 横並び固定 */
+  margin-top: 20px;
+}
+
+.plan-summary-card {
+  background: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 10px;
+  width: 25%;
+  /* 4つで100% */
+  min-width: 0;
+  /* はみ出し防止 */
+  max-width: none;
+  /* 最大幅制限解除 */
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plan-summary-card h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.plan-summary-card .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #06C755;
+  margin-bottom: 8px;
+}
+
+.plan-summary-img {
+  width: 90%;
+  height: auto;
+  margin-top: 12px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .plan-summary-list {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .plan-summary-card {
+    flex: 1 1 45%;
+    min-width: 150px;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .plan-summary-list {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .plan-summary-card {
+    flex: 1 1 100%;
+    min-width: 100px;
+    max-width: 100%;
+  }
 }
 
 
