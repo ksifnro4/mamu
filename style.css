@@ -161,7 +161,8 @@ body {
   text-align: center;
   overflow: hidden;
   padding: 0;
-  /* 画像の高さで調整するのでpadding不要 */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .hero-img {
