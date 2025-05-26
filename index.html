@@ -10,52 +10,65 @@
 
 <body>
   <header class="header">
-    <div class="header-top">
-      <div class="header-top-inner">
-        <div class="logo-area">
-          <img src="img/logo.png" alt="ロゴ" class="logo-img" />
-          <div>
-            <h1 class="logo-text">真夢引越センター</h1>
-            <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
+    <div class="header-fixed-wrap">
+      <div class="header-top">
+        <div class="header-top-inner">
+          <!-- ロゴ -->
+          <div class="logo-area">
+            <a href="index.html">
+              <img src="img/logo.png" alt="ロゴ" class="logo-img" />
+            </a>
+            <div>
+              <h1 class="logo-text">真夢引越センター</h1>
+              <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
+            </div>
+          </div>
+          <div class="right-box">
+            <!-- LINE -->
+            <div class="line-box">
+              <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
+                rel="noopener noreferrer" class="line-link" style="display: flex; align-items: center; gap: 6px;">
+                <img src="img/line.png" alt="LINEロゴ" class="line-logo" />
+                <span class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></span>
+              </a>
+            </div>
+            <!-- 電話 -->
+            <div class="phone-box">
+              <p class="small-text">まずは電話でご相談ください！</p>
+              <a href="tel:050-3135-3930" class="tel-row" style="display: flex; align-items: center; gap: 0.5vw;">
+                <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
+                <span class="tel"><strong>050-3135-3930</strong></span>
+              </a>
+              <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+            </div>
+            <!-- ハンバーガーメニュー -->
+            <button class="nav-toggle sp-only" aria-label="メニューを開く">
+              <span></span><span></span><span></span>
+            </button>
           </div>
         </div>
-        <div class="line-box">
-          <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
-            rel="noopener noreferrer" class="line-link">
-            <img src="img/line.png" alt="LINEロゴ" class="qr" />
-            <p class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></p>
-          </a>
-        </div>
-        <div class="phone-box">
-          <p class="small-text">まずは電話でご相談ください！</p>
-          <div class="tel-row">
-            <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
-            <p class="tel">050-3135-3930</p>
-          </div>
-          <p class="time">受付時間 8:00〜20:00（年中無休）</p>
-        </div>
-        <!-- ハンバーガーメニューアイコン -->
-        <button class="nav-toggle sp-only" aria-label="メニューを開く">
-          <span></span><span></span><span></span>
-        </button>
       </div>
+
+
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="plan.html">料金プラン</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="flow.html">引越の流れ</a></li>
+          <li><a href="contact.html">Q&A・問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
-
-
-
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
   </header>
+
+
+
+
   <main>
     <section class="hero">
-      <img src="img/hero.jpg" alt="引越しイメージ" class="hero-img" />
+      <img src="img/mamu_TOP.png" alt="引越しイメージ" class="hero-img" />
       <div class="hero-content">
         <h2>関東・関西エリアで格安・安心の引越し！</h2>
         <p>即日対応可能！単身からファミリーまで柔軟に対応！</p>
