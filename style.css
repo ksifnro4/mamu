@@ -211,12 +211,16 @@
   .line-qr {
     display: none !important;
   }
-}
 
-.phone-box {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5vw;
+  .phone-box {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5vw;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
 }
 
 /* ===== ナビゲーションバー（PC用） ===== */
@@ -261,7 +265,61 @@
 /* スマホでは非表示 */
 @media screen and (max-width: 900px) {
   .nav-bar {
-    display: none;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -75vw;
+    width: 75vw;
+    max-width: 340px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 16px rgba(0, 0, 0, 0.12);
+    border-radius: 1em 0 0 1em;
+    z-index: 2000;
+    transition: right 0.35s cubic-bezier(.4, 0, .2, 1);
+    padding-top: 80px;
+    overflow-y: auto;
+  }
+
+  .nav-bar.open {
+    right: 0;
+  }
+
+  .nav-bar ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 0 0 2em;
+    height: auto;
+  }
+
+  .nav-bar li {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-bar li a {
+    color: #333;
+    font-size: 1.2rem;
+    padding: 1.2em 0;
+    border-bottom: 1px solid #eee;
+    line-height: 1.2;
+    width: 100%;
+    display: block;
+    background: none;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .nav-bar li a:hover {
+    background: #f8e9f0;
+    color: #06C755;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: relative;
+    z-index: 2100;
   }
 }
 
