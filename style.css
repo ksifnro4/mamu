@@ -219,11 +219,6 @@
   gap: 0.5vw;
 }
 
-.nav-toggle {
-  display: block;
-}
-
-
 /* ===== ナビゲーションバー（PC用） ===== */
 .nav-bar {
   width: 100%;
