@@ -191,7 +191,7 @@
 /* ===== ナビゲーションバー（PC用） ===== */
 .nav-bar {
   width: 100%;
-  background: #111;
+  background: #7a7a7a;
 }
 
 .nav-bar ul {
@@ -250,7 +250,7 @@ body {
   /* ヘッダー高さ＋ナビバー高さ */
   background:
     linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
-    url("img/haikei.jpeg") repeat;
+    url("img/mamu_haikei2.png") repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
 }
@@ -361,15 +361,15 @@ body {
 
 
 .estimate-section {
-  background: linear-gradient(120deg, #fff7fa 60%, #e6fff2 100%);
-  padding: 3em 1.2em 2.5em 1.2em;
+  background:
+    url("img/mamu_haikei.png") center/cover no-repeat;
+  padding: 2.5em 1em 2em 1em;
   text-align: center;
-  margin: 4em 0;
-  border-radius: 1.8em;
-  box-shadow: 0 10px 36px rgba(228, 143, 177, 0.15);
+  margin: 3em 0;
+  border-radius: 1.5em;
+  box-shadow: 0 8px 32px rgba(228, 143, 177, 0.10);
   position: relative;
   overflow: hidden;
-  border: 1px solid #ffe8f0;
 }
 
 .estimate-box {
@@ -406,6 +406,11 @@ body {
   margin-bottom: 0.2em;
   font-weight: bold;
   letter-spacing: 0.08em;
+  background: #fff;
+  border-radius: 1em;
+  box-shadow: 0 2px 12px rgba(228, 143, 177, 0.10);
+  padding: 0.4em 1.2em;
+  display: inline-block;
 }
 
 .estimate-lead {
@@ -678,7 +683,7 @@ body {
 
 /* ===== フッター ===== */
 .footer {
-  background: #222;
+  background: #7a7a7a;
   color: #fff;
   text-align: center;
   padding: 1.5em 0 1em 0;
