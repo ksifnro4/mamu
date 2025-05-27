@@ -6,51 +6,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>会社概要｜真夢引越センター</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="about.css" />
 </head>
 
 <body>
   <header class="header">
-    <div class="header-top">
-      <div class="header-top-inner">
-        <div class="logo-area">
-          <img src="img/logo.png" alt="ロゴ" class="logo-img" />
-          <div>
-            <h1 class="logo-text">真夢引越センター</h1>
-            <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
-          </div>
-        </div>
-        <div class="contact-area">
-          <div class="line-box">
-            <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank" rel="noopener noreferrer" class="line-link">
-              <img src="img/line.png" alt="LINEロゴ" class="qr" />
-              <p class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></p>
+    <div class="header-fixed-wrap">
+      <div class="header-top">
+        <div class="header-top-inner">
+          <!-- ロゴ -->
+          <div class="logo-area">
+            <a href="index.html">
+              <img src="img/logo.png" alt="ロゴ" class="logo-img" />
             </a>
-          </div>
-
-          <div class="phone-box">
-            <p class="small-text">まずは電話でご相談ください！</p>
-            <div class="tel-row">
-              <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
-              <p class="tel">0120-10-7548</p>
+            <div>
+              <h1 class="logo-text">真夢引越センター</h1>
+              <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
             </div>
-            <p class="time">受付時間 8:00〜20:00（年中無休）</p>
           </div>
-
+          <div class="right-box">
+            <!-- LINE -->
+            <div class="line-box">
+              <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
+                rel="noopener noreferrer" class="line-link">
+                <img src="img/line.png" alt="LINEロゴ" class="line-logo" />
+                <span class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></span>
+                <img src="img/mamu_QR.png" alt="LINE QRコード" class="line-qr" />
+              </a>
+            </div>
+            <!-- 電話 -->
+            <div class="phone-box">
+              <p class="small-text">まずは電話でご相談ください！</p>
+              <a href="tel:050-3135-3930" class="tel-row" style="display: flex; align-items: center; gap: 0.5vw;">
+                <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
+                <span class="tel"><strong>050-3135-3930</strong></span>
+              </a>
+              <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+            </div>
+            <!-- ハンバーガーメニュー -->
+            <button class="nav-toggle sp-only" aria-label="メニューを開く">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- ナビゲーションバー -->
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
+
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="plan.html">料金プラン</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="flow.html">引越の流れ</a></li>
+          <li><a href="contact.html">Q&A・問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
+
+
+
+
+
   <section class="content">
     <div class="container">
       <table class="company-table">
@@ -95,24 +114,37 @@
           <td>引越荷造運搬業、引越サービス業</td>
         </tr>
       </table>
+      <div class="company-maps">
+        <div class="company-map-block">
+          <h3>本社</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14279.819322435122!2d135.74514346809357!3d34.8646989423669!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60011b72c988c1d7%3A0x6f499f37e8df4d94!2z55yf5aSiKOODnuODoCnlvJXotorjgrvjg7Pjgr_jg7wg5Lqs6YO95pSv5bqX!5e0!3m2!1sja!2sjp!4v1748334640139!5m2!1sja!2sjp"
+            class="company-map-iframe" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>〒614-8181 京都府八幡市上津屋浜垣内123</p>
+        </div>
+
+        <div class="company-map-block">
+          <h3>東京支社</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3111.824388906495!2d139.80923034260536!3d35.79895021129728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60189129d8b97a0d%3A0xe51b4c8f7ac22498!2z55yf5aSiIO-8iOODnuODoO-8ieW8lei2iuOCu-ODs-OCv-ODvOadseS6rOaUr-W6lw!5e0!3m2!1sja!2sjp!4v1748334569644!5m2!1sja!2sjp"
+            class="company-map-iframe" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p>〒121-0064 東京都足立区保木間4丁目52−7</p>
+        </div>
+      </div>
 
     </div>
   </section>
 
+</body>
 
-  <footer class="footer">
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
-    <p>&copy; 2025 真夢引越センター</p>
-  </footer>
-</body>
-</body>
+
+
+
+<footer class="footer">
+  <p>&copy; 2025 真夢引越センター</p>
+</footer>
+
 
 </html>

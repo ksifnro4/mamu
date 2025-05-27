@@ -75,6 +75,38 @@
   line-height: 1.3;
 }
 
+.line-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.line-logo {
+  height: 4vw;
+  max-height: 56px;
+  width: auto;
+  display: block;
+}
+
+.line-text {
+  color: #06C755;
+  font-size: clamp(10px, 1vw, 16px);
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.line-qr {
+  height: 8vw;
+  /* LINEロゴの2倍サイズ */
+  max-height: 112px;
+  /* 56pxの2倍 */
+  width: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
+  margin-left: 8px;
+  display: block;
+}
+
 /* ===== 電話 ===== */
 .tel-icon {
   height: 4vw;
@@ -176,15 +208,19 @@
     gap: 3vw;
   }
 
-  .phone-box {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5vw;
+  .line-qr {
+    display: none !important;
   }
+}
 
-  .nav-toggle {
-    display: block;
-  }
+.phone-box {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+.nav-toggle {
+  display: block;
 }
 
 
@@ -257,7 +293,7 @@ body {
 
 /* ===== HEROセクション ===== */
 .hero {
-  width: 100％;
+  width: 100%;
   /* 画面幅ぴったり */
   margin: 0;
   padding: 0;
@@ -269,8 +305,8 @@ body {
 .hero-img {
   width: 100vw;
   /* 画面幅ぴったり */
-  min-width: 100％;
-  max-width: 100％;
+  min-width: 100%;
+  max-width: 100%;
   display: block;
   object-fit: cover;
   margin: 0;
@@ -281,8 +317,8 @@ body {
 .hero-img-sub {
   width: 100vw;
   /* 画面幅ぴったり */
-  min-width: 100％;
-  max-width: 100％;
+  min-width: 100%;
+  max-width: 100%;
   display: block;
   object-fit: cover;
   margin: 0;
