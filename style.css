@@ -278,6 +278,18 @@ body {
   position: relative;
 }
 
+.hero-img-sub {
+  width: 100vw;
+  /* 画面幅ぴったり */
+  min-width: 100％;
+  max-width: 100％;
+  display: block;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
 @media screen and (max-width: 600px) {
   body {
     padding-top: 12vw;
@@ -285,17 +297,24 @@ body {
 
   .hero-img {
     width: 120vw;
-    /* 画面幅の120%で横に大きく */
     height: 100%;
-    /* 親要素の高さにフィット */
     max-width: none;
-    /* 最大幅制限を解除 */
     object-fit: cover;
     display: block;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    /* 中央寄せ */
+  }
+
+  .hero-img-sub {
+    width: 120vw;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .hero {
@@ -462,4 +481,14 @@ body {
 
 .btn:hover {
   background: #d06b9a;
+}
+
+
+/* ===== フッター ===== */
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1.5em 0 1em 0;
+  font-size: 1em;
 }

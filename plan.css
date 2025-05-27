@@ -1,0 +1,86 @@
+/* ===== プラン一覧 ===== */
+.content header h1 {
+    font-size: clamp(1.6rem, 5vw, 2.4rem);
+    color: #e48fb1;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.content header p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2em;
+}
+
+.plan-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 2vw 2vw 1vw 2vw;
+    width: 45%;
+    min-width: 260px;
+    max-width: 420px;
+    margin-bottom: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.plan-card h3 {
+    font-size: 1.2rem;
+    color: #e48fb1;
+    margin: 0.5em 0 0.2em 0;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+.plan-card .price {
+    font-size: 1.1rem;
+    color: #06C755;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.plan-card ul {
+    margin: 0.5em 0 0 1.2em;
+    padding: 0;
+    color: #333;
+    font-size: 0.97em;
+}
+
+.plan-card li {
+    margin-bottom: 0.3em;
+}
+
+.plan-card strong {
+    color: #333;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        padding: 4vw 2vw;
+    }
+
+    .plan-list {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .plan-card {
+        width: 95vw;
+        max-width: 98vw;
+        min-width: 0;
+        padding: 4vw 2vw 2vw 2vw;
+        margin-bottom: 0;
+    }
+}

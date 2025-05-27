@@ -6,50 +6,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>料金プラン｜真夢引越センター</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="plan.css" />
 </head>
 
 <body>
   <header class="header">
-    <div class="header-top">
-      <div class="header-top-inner">
-        <div class="logo-area">
-          <img src="img/logo.png" alt="ロゴ" class="logo-img" />
-          <div>
-            <h1 class="logo-text">真夢引越センター</h1>
-            <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
-          </div>
-        </div>
-        <div class="contact-area">
-          <div class="line-box">
-            <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
-              rel="noopener noreferrer" class="line-link">
-              <img src="img/line.png" alt="LINEロゴ" class="qr" />
-              <p class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></p>
+    <div class="header-fixed-wrap">
+      <div class="header-top">
+        <div class="header-top-inner">
+          <!-- ロゴ -->
+          <div class="logo-area">
+            <a href="index.html">
+              <img src="img/logo.png" alt="ロゴ" class="logo-img" />
             </a>
-          </div>
-
-          <div class="phone-box">
-            <p class="small-text">まずは電話でご相談ください！</p>
-            <div class="tel-row">
-              <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
-              <p class="tel">050-3135-3930</p>
+            <div>
+              <h1 class="logo-text">真夢引越センター</h1>
+              <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
             </div>
-            <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+          </div>
+          <div class="right-box">
+            <!-- LINE -->
+            <div class="line-box">
+              <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
+                rel="noopener noreferrer" class="line-link" style="display: flex; align-items: center; gap: 6px;">
+                <img src="img/line.png" alt="LINEロゴ" class="line-logo" />
+                <span class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></span>
+              </a>
+            </div>
+            <!-- 電話 -->
+            <div class="phone-box">
+              <p class="small-text">まずは電話でご相談ください！</p>
+              <a href="tel:050-3135-3930" class="tel-row" style="display: flex; align-items: center; gap: 0.5vw;">
+                <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
+                <span class="tel"><strong>050-3135-3930</strong></span>
+              </a>
+              <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+            </div>
+            <!-- ハンバーガーメニュー -->
+            <button class="nav-toggle sp-only" aria-label="メニューを開く">
+              <span></span><span></span><span></span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ナビゲーションバー -->
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html" aria-current="page">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
+
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="plan.html">料金プラン</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="flow.html">引越の流れ</a></li>
+          <li><a href="contact.html">Q&A・問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
 
@@ -127,15 +139,6 @@
 
 
   <footer class="footer">
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html" aria-current="page">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
     <p>&copy; 2025 真夢引越センター</p>
   </footer>
 </body>
