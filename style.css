@@ -321,6 +321,173 @@ body {
     padding: 0;
     min-height: unset;
   }
+
+}
+
+
+.google-review-btn-wrap {
+  text-align: center;
+  margin: 1.5em 0 2.5em 0;
+}
+
+.google-review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  background: #fff;
+  color: #4285F4;
+  border: 2px solid #4285F4;
+  border-radius: 2em;
+  padding: 0.7em 1.6em;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.08);
+  transition: background 0.2s, color 0.2s;
+}
+
+.google-review-btn:hover {
+  background: #4285F4;
+  color: #fff;
+}
+
+.google-logo {
+  height: 1.5em;
+  width: auto;
+  vertical-align: middle;
+}
+
+
+
+
+.estimate-section {
+  background: linear-gradient(120deg, #fff7fa 60%, #e6fff2 100%);
+  padding: 3em 1.2em 2.5em 1.2em;
+  text-align: center;
+  margin: 4em 0;
+  border-radius: 1.8em;
+  box-shadow: 0 10px 36px rgba(228, 143, 177, 0.15);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ffe8f0;
+}
+
+.estimate-box {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.estimate-catch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.estimate-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.1em;
+  animation: bounce 1.2s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.estimate-box h2 {
+  font-size: 2rem;
+  color: #e48fb1;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.estimate-lead {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1em;
+  font-weight: bold;
+}
+
+.estimate-lead .highlight {
+  color: #06C755;
+  background: #eafff2;
+  border-radius: 0.5em;
+  padding: 0 0.3em;
+  font-weight: bold;
+}
+
+.estimate-subtext {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+  margin: -0.5em 0 1.2em 0;
+}
+
+.emphasis {
+  color: #e48fb1;
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: #fff4f9;
+  padding: 0 0.4em;
+  border-radius: 0.4em;
+}
+
+.estimate-points {
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 1.5em 0;
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+.estimate-points li::before {
+  content: "✅ ";
+  color: #06C755;
+}
+
+.estimate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2em;
+  flex-wrap: wrap;
+  margin-bottom: 1.2em;
+}
+
+.estimate-line,
+.estimate-phone {
+  background: linear-gradient(90deg, #06C755, #00b368);
+  color: white;
+  padding: 1em 2.2em;
+  border-radius: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.15rem;
+  box-shadow: 0 2px 8px rgba(6, 199, 85, 0.08);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.estimate-phone {
+  background: linear-gradient(90deg, #e48fb1, #f37da0);
+}
+
+.estimate-line:hover,
+.estimate-phone:hover {
+  opacity: 0.92;
+  transform: translateY(-2px) scale(1.04);
+}
+
+.estimate-note {
+  color: #888;
+  font-size: 0.98rem;
+  margin-top: 0.5em;
 }
 
 
@@ -481,6 +648,31 @@ body {
 
 .btn:hover {
   background: #d06b9a;
+}
+
+/* style.cssに追加 */
+.plan-detail-btn-wrap {
+  text-align: center;
+  margin: 2em 0 0.5em 0;
+}
+
+.plan-detail-btn {
+  display: inline-block;
+  background: linear-gradient(90deg, #ff0000 0%, #06C755 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.15rem;
+  padding: 0.9em 2.4em;
+  border-radius: 2em;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(228, 143, 177, 0.10);
+  transition: background 0.2s, transform 0.2s;
+  border: 2.5px solid #fff;
+}
+
+.plan-detail-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px) scale(1.04);
 }
 
 

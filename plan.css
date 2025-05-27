@@ -1,11 +1,22 @@
 /* ===== プラン一覧 ===== */
 .content header h1 {
-    font-size: clamp(1.6rem, 5vw, 2.4rem);
-    color: #e48fb1;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    color: #fff;
     text-align: center;
     margin-bottom: 0.5em;
     font-weight: bold;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
+    padding: 0.7em 2em;
+    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
+    border-radius: 2em;
+    box-shadow:
+        0 8px 32px rgba(228, 143, 177, 0.18),
+        0 0 0 8px #fff inset,
+        0 2px 8px 2px rgba(6, 199, 85, 0.10);
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content header p {
@@ -16,10 +27,13 @@
 
 .plan-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    /* 折り返さず横並び */
     gap: 2vw;
     justify-content: center;
     align-items: stretch;
+    overflow-x: auto;
+    /* 画面が狭いときは横スクロール */
 }
 
 .plan-card {
@@ -27,13 +41,36 @@
     border-radius: 1vw;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     padding: 2vw 2vw 1vw 2vw;
-    width: 45%;
-    min-width: 260px;
-    max-width: 420px;
+    width: 22%;
+    /* 4枚で100%になるよう調整 */
+    min-width: 220px;
+    /* カードの最小幅 */
+    max-width: 320px;
+    /* カードの最大幅 */
     margin-bottom: 2vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    box-sizing: border-box;
+    height: 100%;
+    /* 縦長に揃える */
+}
+
+/* スマホや狭い画面では縦並び */
+@media screen and (max-width: 900px) {
+    .plan-list {
+        flex-direction: column;
+        gap: 4vw;
+        overflow-x: visible;
+    }
+
+    .plan-card {
+        width: 95vw;
+        max-width: 98vw;
+        min-width: 0;
+        padding: 4vw 2vw 2vw 2vw;
+        margin-bottom: 0;
+    }
 }
 
 .plan-card h3 {
@@ -42,13 +79,35 @@
     margin: 0.5em 0 0.2em 0;
     font-weight: bold;
     letter-spacing: 0.04em;
+    background: linear-gradient(90deg, #fff 60%, #f8e9f0 100%);
+    border-radius: 1em;
+    padding: 0.3em 1em;
+    display: inline-block;
+    box-shadow: 0 1px 8px rgba(228, 143, 177, 0.08);
+    position: relative;
+}
+
+.plan-card h3::after {
+    content: "";
+    display: block;
+    margin: 0.4em auto 0 auto;
+    width: 32px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
 }
 
 .plan-card .price {
-    font-size: 1.1rem;
-    color: #06C755;
+    font-size: 1.5rem;
+    color: #fff;
+    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
+    padding: 0.4em 1.2em;
+    border-radius: 2em;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin: 0.7em 0 0.5em 0;
+    box-shadow: 0 2px 8px rgba(228, 143, 177, 0.12);
+    display: inline-block;
+    letter-spacing: 0.05em;
 }
 
 .plan-card ul {
@@ -77,6 +136,127 @@
     }
 
     .plan-card {
+        width: 95vw;
+        max-width: 98vw;
+        min-width: 0;
+        padding: 4vw 2vw 2vw 2vw;
+        margin-bottom: 0;
+    }
+}
+
+
+/* 横長カード用 */
+
+/* plan.cssに追加 */
+
+.plan-extra-title {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    color: #fff;
+    text-align: center;
+    margin: 3vw 0 1.5vw 0;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    padding: 0.7em 2em;
+    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
+    border-radius: 2em;
+    box-shadow:
+        0 8px 32px rgba(228, 143, 177, 0.18),
+        0 0 0 8px #fff inset,
+        0 2px 8px 2px rgba(6, 199, 85, 0.10);
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.plan-extra-card h4,
+.plan-extra-card .option-price {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.plan-extra-card h4 {
+    background: linear-gradient(90deg, #fff 60%, #e6f3fa 100%);
+    border-radius: 1em;
+    padding: 0.3em 1em;
+    box-shadow: 0 1px 8px rgba(228, 143, 177, 0.08);
+    position: relative;
+    margin-top: 0.7em;
+    margin-bottom: 0.3em;
+    font-size: 1.1rem;
+    color: #06C755;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+.plan-extra-card h4::after {
+    content: "";
+    display: block;
+    margin: 0.4em auto 0 auto;
+    width: 32px;
+    height: 3px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
+}
+
+.plan-extra-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
+    margin: 3vw 0 2vw 0;
+}
+
+.plan-extra-card {
+    background: #fff;
+    border-radius: 1vw;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+    padding: 2vw 2vw 1vw 2vw;
+    min-width: 280px;
+    max-width: 420px;
+    flex: 1 1 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.plan-extra-card h4 {
+    font-size: 1.1rem;
+    color: #06C755;
+    margin: 0 0 0.5em 0;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+}
+
+.plan-extra-card ul {
+    margin: 0 0 0.5em 1.2em;
+    padding: 0;
+    color: #333;
+    font-size: 0.97em;
+}
+
+.plan-extra-card li {
+    margin-bottom: 0.3em;
+}
+
+.plan-extra-card .option-price {
+    color: #e48fb1;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+@media screen and (max-width: 900px) {
+    .plan-extra-list {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .plan-extra-card {
         width: 95vw;
         max-width: 98vw;
         min-width: 0;
