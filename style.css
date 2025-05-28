@@ -414,37 +414,82 @@ body {
 }
 
 
+.google-review-slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* 画面全体の高さを使う場合 */
+  margin: auto;
+  padding: 20px;
+  background-image: url('img/mamu_google.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.swiper-container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  /* 横方向の中央寄せ */
+  top: 70%;
+  /* 縦位置の基準を50%下げる */
+  transform: translateY(-60%);
+  /* 位置微調整（上に戻す）*/
+}
+
+@media screen and (max-width: 600px) {
+  .swiper-container {
+    transform: scale(0.6) translateY(-50%);
+    transform-origin: center top;
+    /* 上中央を基準に縮小 */
+    top: 65%;
+  }
+}
+
+
+
+
+.slider-section {
+  position: relative;
+  /* 必須 */
+}
+
 .google-review-btn-wrap {
-  text-align: center;
-  margin: 1.5em 0 2.5em 0;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 0;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 10;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .google-review-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 8px;
   background: #fff;
-  color: #4285F4;
-  border: 2px solid #4285F4;
-  border-radius: 2em;
-  padding: 0.7em 1.6em;
-  font-weight: bold;
-  font-size: 1.1rem;
+  padding: 8px 16px;
+  border-radius: 30px;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(66, 133, 244, 0.08);
-  transition: background 0.2s, color 0.2s;
-}
-
-.google-review-btn:hover {
-  background: #4285F4;
-  color: #fff;
+  font-weight: bold;
+  color: #000;
 }
 
 .google-logo {
-  height: 1.5em;
-  width: auto;
-  vertical-align: middle;
+  height: 20px;
 }
+
+
+
 
 
 

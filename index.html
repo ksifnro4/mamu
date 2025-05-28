@@ -2,6 +2,9 @@
 <html lang="ja">
 
 <head>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>真夢引越センター｜トップページ</title>
@@ -101,15 +104,33 @@
       </section>
 
 
-      <img src="img/mamu_google.png" alt="口コミ" class="hero-img-sub" />
 
-      <div class="google-review-btn-wrap">
-        <a href="https://www.google.com/search?kgmid=/g/11v43sxb37&hl=ja-JP&q=%E7%9C%9F%E5%A4%A2+%EF%BC%88%E3%83%9E%E3%83%A0%EF%BC%89%E5%BC%95%E8%B6%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E6%9D%B1%E4%BA%AC%E6%94%AF%E5%BA%97&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/1&kgs=65c6ab1b256fd60b#"
-          target="_blank" rel="noopener" class="google-review-btn">
-          <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
-          Google口コミを見る
-        </a>
+
+      <div class="google-review-slider-wrap">
+        <!-- Swiper スライダー -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/KUCHI_01.png" alt="スライド1" /></div>
+            <div class="swiper-slide"><img src="img/KUCHI_02.png" alt="スライド2" /></div>
+            <div class="swiper-slide"><img src="img/KUCHI_03.png" alt="スライド3" /></div>
+            <div class="swiper-slide"><img src="img/KUCHI_04.png" alt="スライド4" /></div>
+            <div class="swiper-slide"><img src="img/KUCHI_05.png" alt="スライド5" /></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+
+        <!-- Google口コミボタン -->
+        <div class="google-review-btn-wrap">
+          <a href="https://www.google.com/..." target="_blank" rel="noopener" class="google-review-btn">
+            <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
+            Google口コミを見る
+          </a>
+        </div>
       </div>
+
+
+      
 
 
     </section>
@@ -124,7 +145,7 @@
         </h2>
         <div class="plan-summary-list">
           <div class="plan-summary-card">
-             <img src="img/PURAN_MINI.png" alt="ミニパック" class="plan-title-img">
+            <img src="img/PURAN_MINI.png" alt="ミニパック" class="plan-title-img">
             <div class="price">13,000円～</div>
             <p>軽トラック～1.5t</p>
             <img src="img/plan1.jpg" alt="単身パック小" class="plan-summary-img" />
@@ -179,3 +200,5 @@
   <script src="main.js"></script>
 
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

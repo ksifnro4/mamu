@@ -56,6 +56,23 @@
     /* 縦長に揃える */
 }
 
+.plan-header {
+    text-align: center;
+}
+
+.plan-title-img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
+
+.price {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+
 /* スマホや狭い画面では縦並び */
 @media screen and (max-width: 900px) {
     .plan-list {
