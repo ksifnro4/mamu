@@ -6,79 +6,281 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>引越の流れ｜真夢引越センター</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="flow.css" />
 </head>
 
 <body>
   <header class="header">
-    <div class="header-top">
-      <div class="header-top-inner">
-        <div class="logo-area">
-          <img src="img/logo.png" alt="ロゴ" class="logo-img" />
-          <div>
-            <h1 class="logo-text">真夢引越センター</h1>
-            <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
-          </div>
-        </div>
-        <div class="contact-area">
-          <div class="line-box">
-            <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank" rel="noopener noreferrer" class="line-link">
-              <img src="img/line.png" alt="LINEロゴ" class="qr" />
-              <p class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></p>
+    <div class="header-fixed-wrap">
+      <div class="header-top">
+        <div class="header-top-inner">
+          <!-- ロゴ -->
+          <div class="logo-area">
+            <a href="index.html">
+              <img src="img/logo.png" alt="ロゴ" class="logo-img" />
             </a>
-          </div>
-
-          <div class="phone-box">
-            <p class="small-text">まずは電話でご相談ください！</p>
-            <div class="tel-row">
-              <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
-              <p class="tel">050-3135-3930</p>
+            <div>
+              <h1 class="logo-text">真夢引越センター</h1>
+              <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
             </div>
-            <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+          </div>
+          <div class="right-box">
+            <!-- LINE -->
+            <div class="line-box">
+              <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
+                rel="noopener noreferrer" class="line-link">
+                <img src="img/line.png" alt="LINEロゴ" class="line-logo" />
+                <span class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></span>
+                <img src="img/mamu_QR.png" alt="LINE QRコード" class="line-qr" />
+              </a>
+            </div>
+            <!-- 電話 -->
+            <div class="phone-box">
+              <p class="small-text">まずは電話でご相談ください！</p>
+              <a href="tel:050-3135-3930" class="tel-row" style="display: flex; align-items: center; gap: 0.5vw;">
+                <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
+                <span class="tel"><strong>050-3135-3930</strong></span>
+              </a>
+              <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+            </div>
+            <!-- ハンバーガーメニュー -->
+            <button class="nav-toggle sp-only" aria-label="メニューを開く">
+              <span></span><span></span><span></span>
+            </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- ナビゲーションバー -->
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
+
+
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="index.html">トップ</a></li>
+          <li><a href="plan.html">料金プラン</a></li>
+          <li><a href="about.html">会社概要</a></li>
+          <li><a href="flow.html">引越の流れ</a></li>
+          <li><a href="contact.html">Q&A・問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
+
+
+
   <section class="content">
     <div class="container">
-      <h2>引越の流れ</h2>
+      <header>
+        <h1>引越の流れ</h1>
+      </header>
+      <p class="flow-lead">
+        お問い合わせからアフターサービスまで、<br>
+        真夢引越センターの安心サポートをご紹介します。
+      </p>
+
       <div class="flow-wrapper">
-
         <div class="flow-card">
-          <p><strong>STEP 1</strong> お問い合わせ・お見積もり</p>
+          <span class="flow-step">STEP 1</span>
+          <p>お問い合わせ・お見積もり</p>
+          <section class="estimate-section">
+            <div class="estimate-box">
+              <div class="estimate-catch">
+                <span class="estimate-icon">📞📦💬</span>
+                <h2>無料お見積りはこちら！</h2>
+              </div>
+              <p class="estimate-lead">
+                LINEまたはお電話で、<span class="highlight">最短10分</span>でスピード見積もり！<br>
+                カンタンLINE受付・しつこい営業なし・ご相談だけでも大歓迎！
+              </p>
+              <p class="estimate-subtext">＼ すでに <strong class="emphasis">1,200件以上</strong> のご相談実績 ／</p>
+              <ul class="estimate-points">
+                <li>✅ ご相談だけでもOK</li>
+                <li>✅ 明確な料金提示で安心</li>
+                <li>✅ スマホからカンタン3分で完了！</li>
+              </ul>
+              <div class="estimate-buttons">
+                <a href="https://page.line.me/378wnhjo?openQrModal=true" target="_blank"
+                  class="estimate-line">LINEで見積もり</a>
+                <a href="tel:050-3135-3930" class="estimate-phone">電話する</a>
+              </div>
+              <p class="estimate-note">※即日対応も可能です。まずはお気軽にご連絡ください！</p>
+            </div>
+          </section>
+        </div>
+        <div class="arrow">↓</div>
+        <div class="flow-card">
+          <span class="flow-step">STEP 2</span>
+          <p>プランのご案内</p>
+          <section class="plan-summary">
+            <div class="container">
+              <h2>
+                <a href="plan.html" style="color: inherit; text-decoration: none; display: inline-block;">
+                  料金プラン
+                </a>
+              </h2>
+              <div class="plan-summary-list">
+                <div class="plan-summary-card">
+                  <h3>ミニパック</h3>
+                  <div class="price">13,000円～</div>
+                  <p>軽トラック～1.5t</p>
+                  <img src="img/plan1.jpg" alt="単身パック小" class="plan-summary-img" />
+                  <p class="plan-comment">
+                    荷物が少なめの人にちょうどいい！<br>
+                    家具家電つき物件の引越しにも◎
+                  </p>
+                </div>
+                <div class="plan-summary-card">
+                  <h3>単身パック</h3>
+                  <div class="price">18,000円～</div>
+                  <p>2tショート～2tロング</p>
+                  <img src="img/plan2.jpg" alt="単身パック大" class="plan-summary-img" />
+                  <p class="plan-comment">
+                    家電とかちょっと多めでも大丈夫！<br>
+                    ひとり暮らしの引越しにおすすめ！
+                  </p>
+                </div>
+                <div class="plan-summary-card">
+                  <h3>二人暮らしパック</h3>
+                  <div class="price">30,000円～</div>
+                  <p>2tロング～3t</p>
+                  <img src="img/plan3.jpg" alt="二人暮らしパック" class="plan-summary-img" />
+                  <p class="plan-comment">
+                    ふたり分の荷物もまとめてOK！<br>
+                    カップルや新婚さんにぴったり♪
+                  </p>
+                </div>
+                <div class="plan-summary-card">
+                  <h3>ファミリーパック</h3>
+                  <div class="price">50,000円～</div>
+                  <p>3t～4t</p>
+                  <img src="img/plan4.jpg" alt="ファミリーパック" class="plan-summary-img" />
+                  <p class="plan-comment">
+                    荷物が多くても安心！<br>
+                    家族みんなでのお引越しにおすすめ！
+                  </p>
+                </div>
+              </div>
+
+          </section>
+          <div class="plan-detail-btn-wrap">
+            <a href="plan.html" class="plan-detail-btn">詳しい料金プランを見る</a>
+          </div>
         </div>
         <div class="arrow">↓</div>
 
-        <div class="flow-card">
-          <p><strong>STEP 2</strong> 訪問・内容確認</p>
-        </div>
-        <div class="arrow">↓</div>
 
         <div class="flow-card">
-          <p><strong>STEP 3</strong> ご契約</p>
-        </div>
-        <div class="arrow">↓</div>
+          <span class="flow-step">STEP 3</span>
+          <p>ご契約・事前準備</p>
+          <div class="plan-summary-list">
+            <div class="plan-summary-card">
+              <h3>ダンボール梱包</h3>
+              <div class="price">小物類の梱包</div>
+              <p>無料ダンボールもご利用ください！</p>
+              <img src="img/plan3.jpg" alt="二人暮らしパック" class="plan-summary-img" />
+              <p class="plan-comment">
+                重い物は小さい箱に<br>軽い物は大きい箱に。<br>
+                割れ物には「ワレモノ注意」<br>すき間は新聞紙で保護。<br>
+                中身の記載や、すぐ使う物は別にまとめておくのがポイントです。
+              </p>
+            </div>
 
-        <div class="flow-card">
-          <p><strong>STEP 4</strong> 梱包・引越し当日作業</p>
-        </div>
-        <div class="arrow">↓</div>
+            <div class="plan-summary-card">
+              <h3>不用品の整理・ゴミ出し</h3>
+              <div class="price">引越し前の片付けサポート</div>
+              <p>身軽に引越しをするために！</p>
+              <img src="img/huyouhinn.jpg" alt="不用品整理イメージ" class="plan-summary-img" />
+              <p class="plan-comment">
+                使わない物は早めに分別・処分。<br>
+                粗大ゴミは自治体へ事前申請を。<br>
+                処分に迷う物もご相談ください。<br>
+                片付けをすると荷造りも楽になります。
+              </p>
+            </div>
 
-        <div class="flow-card">
-          <p><strong>STEP 5</strong> 完了・アフターサービス</p>
-        </div>
 
+            <div class="plan-summary-card">
+              <h3>ライフラインの準備</h3>
+              <div class="price">電気・ガス・水道・ネットの手続き</div>
+              <p>新生活をスムーズに始めるために！</p>
+              <img src="img/lifeline.webp" alt="ライフライン手続きイメージ" class="plan-summary-img" />
+              <p class="plan-comment">
+                電気・ガス・水道は、引越し前に開通予約を。<br>
+                プロバイダの契約変更や回線工事も早めに！<br>
+                各社の連絡先や申請方法は要チェック。<br>
+                ライフラインの準備は、安心の第一歩です。
+              </p>
+            </div>
+
+
+            <div class="plan-summary-card">
+              <h3>引越し業者との最終確認</h3>
+              <div class="price">前日のチェックポイント</div>
+              <p>当日の混乱を防ぐために！</p>
+              <img src="img/check.jpg" alt="引越し業者との最終確認イメージ" class="plan-summary-img" />
+              <p class="plan-comment">
+                作業時間・到着予定・荷物の最終確認。<br>
+                搬出・搬入経路やエレベーター使用可否も確認。<br>
+                支払い方法や連絡手段もチェックしておくと安心。<br>
+                気になる点は事前にしっかり相談を！
+              </p>
+            </div>
+
+
+
+          </div>
+
+
+
+          <div class="arrow">↓</div>
+
+
+          <div class="flow-card">
+            <span class="flow-step">STEP 4</span>
+            <p>引越し当日作業</p>
+            <div class="plan-summary-list">
+              <div class="plan-summary-card">
+                <h3>引越し当日作業</h3>
+                <div class="price">荷物の搬出・搬入とチェック</div>
+                <p>スムーズな引越しのために！</p>
+                <img src="img/touzitu.jpg" alt="引越し作業イメージ" class="plan-summary-img" />
+                <p class="plan-comment">
+                  作業開始前に荷物リストを再確認。<br>
+                  貴重品や大事な書類は手元で管理を。<br>
+                  搬出・搬入の際は、傷や破損がないかチェック。<br>
+                  作業終了後は忘れ物がないか確認しましょう。
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="arrow">↓</div>
+
+
+          <div class="flow-card">
+            <span class="flow-step">STEP 5</span>
+            <p>完了・アフターサービス</p>
+            <div class="plan-summary-list">
+              <div class="plan-summary-card">
+                <h3>引越し後の手続き・サポート</h3>
+                <div class="price">住所変更・荷解き・アフター対応</div>
+                <p>新生活をスムーズにスタート！</p>
+                <img src="img/syorui.jpeg" alt="引越し後の手続きイメージ" class="plan-summary-img" />
+                <p class="plan-comment">
+                  転居届・免許・各種契約の住所変更をお早めに。<br>
+                  荷解きは使う順に少しずつ進めると快適です。<br>
+                  不用品処分やアフターサポートも対応中。<br>
+                  ご不明点があればいつでもご相談ください。
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+
+
+        </div>
       </div>
     </div>
   </section>
@@ -86,18 +288,13 @@
 
 
   <footer class="footer">
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="index.html">トップ</a></li>
-        <li><a href="plan.html">料金プラン</a></li>
-        <li><a href="about.html">会社概要</a></li>
-        <li><a href="flow.html">引越の流れ</a></li>
-        <li><a href="contact.html">Q&A・問い合わせ</a></li>
-      </ul>
-    </nav>
     <p>&copy; 2025 真夢引越センター</p>
   </footer>
-</body>
+  <script src="main.js"></script>
+
+
+
+
 </body>
 
 </html>

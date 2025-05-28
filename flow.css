@@ -1,0 +1,85 @@
+/* flow.cssに追加・修正例 */
+.content header h1 {
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    color: #fff;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    letter-spacing: 0.12em;
+    padding: 0.7em 2em;
+    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
+    border-radius: 2em;
+    box-shadow:
+        0 8px 32px rgba(228, 143, 177, 0.18),
+        0 0 0 8px #fff inset,
+        0 2px 8px 2px rgba(6, 199, 85, 0.10);
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content header p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2em;
+}
+
+.flow-lead {
+    color: #fff;
+    font-size: 1.1rem;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+
+.flow-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+    margin-top: 1.5em;
+}
+
+.flow-card {
+    background: #fff;
+    border-radius: 1em;
+    box-shadow: 0 2px 16px rgba(228, 143, 177, 0.08);
+    padding: 1.2em 2em;
+    min-width: 220px;
+    max-width: 1800px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.08rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.flow-step {
+    display: inline-block;
+    background: #e48fb1;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 1em;
+    padding: 0.2em 1.2em;
+    margin-bottom: 0.5em;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+}
+
+.arrow {
+    font-size: 2.2rem;
+    color: #e48fb1;
+    margin: 0.2em 0;
+}
+
+@media screen and (max-width: 600px) {
+    .flow-title-card {
+        padding: 1em 0.5em 0.7em 0.5em;
+    }
+
+    .flow-card {
+        padding: 1em 0.7em;
+        min-width: 0;
+        max-width: 98vw;
+    }
+}

@@ -1,0 +1,98 @@
+/* contact.css */
+.content {
+    padding: 40px 20px;
+    background-image: url("img/mamu_TOP_2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Yu Gothic", sans-serif;
+    color: #333;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.4em;
+    margin-top: 30px;
+    color: #444;
+}
+
+.qa-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.qa-card strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+.submit-btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+.form-note {
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contact-card {
+    margin-top: 40px;
+}

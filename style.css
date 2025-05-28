@@ -639,29 +639,13 @@ body {
   z-index: 2;
 }
 
-.plan-summary-card h3 {
-  font-size: 1.15rem;
-  color: #e48fb1;
-  margin: 0.5em 0 0.2em 0;
-  font-weight: bold;
-  letter-spacing: 0.04em;
-  background: linear-gradient(90deg, #fff 60%, #f8e9f0 100%);
-  border-radius: 1em;
-  padding: 0.3em 1em;
-  display: inline-block;
-  box-shadow: 0 1px 8px rgba(228, 143, 177, 0.08);
-  position: relative;
+.plan-title-img {
+  width: 230px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.plan-summary-card h3::after {
-  content: "";
-  display: block;
-  margin: 0.4em auto 0 auto;
-  width: 32px;
-  height: 3px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
-}
 
 .plan-summary-list {
   display: flex;
