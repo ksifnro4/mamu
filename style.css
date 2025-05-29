@@ -618,6 +618,42 @@ body {
 }
 
 
+
+/* ===== カレンダーセクション ===== */
+.calendar-section {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.calendar-section .title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  /* 小さい画面では縦並びに切り替え */
+}
+
+.calendar-frame {
+  flex: 1 1 45%;
+  /* 幅は最大で約45%、余裕をもたせる */
+  min-width: 300px;
+  /* 小さい画面でもある程度の幅を確保 */
+  height: 500px;
+  /* カレンダーの高さは調整可 */
+  border: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  pointer-events: none;
+}
+
+
+
 /* ===== 料金プラン（抜粋）セクション ===== */
 /* ===== 料金プラン h2 見出しデザイン ===== */
 .plan-summary h2 {

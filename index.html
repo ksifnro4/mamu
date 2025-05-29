@@ -95,10 +95,10 @@
           </ul>
 
           <div class="estimate-buttons">
-            <a href="https://page.line.me/378wnhjo?openQrModal=true" target="_blank" >
+            <a href="https://page.line.me/378wnhjo?openQrModal=true" target="_blank">
               <img src="img/LINE_MITSUMORI.png" alt="LINEで見積もり">
             </a>
-            <a href="tel:050-3135-3930" >
+            <a href="tel:050-3135-3930">
               <img src="img/DENWA_MITSUMORI.png" alt="電話で見積もり">
             </a>
           </div>
@@ -134,11 +134,31 @@
         </div>
       </div>
 
-
-
-
-
     </section>
+
+
+
+
+
+    <section class="calendar-section">
+      <h2 class="title">予約状況カレンダー</h2>
+      <div class="calendar-container">
+        <iframe id="iframe-this-month" src="" title="今月の予約状況" class="calendar-frame" frameborder="0" scrolling="no"
+          style="border:0"></iframe>
+
+        <iframe id="iframe-next-month" src="" title="翌月の予約状況" class="calendar-frame" frameborder="0" scrolling="no"
+          style="border:0"></iframe>
+      </div>
+    </section>
+
+    <script src="calendar.js"></script>
+
+
+
+
+
+
+
 
 
     <section class="plan-summary">
@@ -204,6 +224,21 @@
   </footer>
   <script src="main.js"></script>
 
-</html>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper-container', {
+      loop: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      autoplay: {
+        delay: 5000,
+      },
+    });
+  </script>
+
+</body>
+
+</html>
