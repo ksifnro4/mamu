@@ -2,6 +2,7 @@
 <html lang="ja">
 
 <head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>料金プラン｜真夢引越センター</title>
@@ -150,47 +151,66 @@
             </ul>
           </div>
         </div>
-      </div>
-      <!-- 各種オプション -->
-      <h2 class="plan-extra-title">各種オプション</h2>
-      <div class="plan-extra-list">
-        <!-- 無料オプション -->
-        <div class="plan-extra-card free-option">
-          <h4>🎁 無料オプション</h4>
-          <ul>
-            <li>ダンボール20箱、ガムテープの無料配送</li>
-            <li>ハンガーボックス貸出</li>
-            <li>ベッドの解体、組み立て作業</li>
-            <li>洗濯機の取り外し、取り付け</li>
-            <li>冷蔵庫の取り外し、取り付け</li>
-            <li>大型家具の梱包配置</li>
-            <li>布団袋サービス</li>
-            <li>家具・家電の簡易梱包</li>
-            <li>養生作業</li>
-            <li>粗大ごみの荷下ろし</li>
-            <li>荷物損害保険</li>
-          </ul>
-        </div>
-        <!-- 時間指定 -->
-        <div class="plan-extra-card time-option">
-          <h4>⏰ 時間指定</h4>
-          <p>午前・午後・夕方などご希望の時間帯でお引越し可能です。<br>
-            お忙しい方やスケジュール重視の方におすすめ！</p>
-          <p class="option-price">+3,000円～</p>
-        </div>
-        <!-- 特殊作業プラン -->
-        <div class="plan-extra-card special-option">
-          <h4>🛠️ 特殊作業</h4>
-          <ul>
-            <li>エアコンの取り外し・取り付け</li>
-            <li>大型家具の分解・組立</li>
-            <li>吊り上げ・吊り下げ作業</li>
-            <li>ピアノ・金庫・バイク運搬</li>
-            <li>不用品回収</li>
-          </ul>
-          <p class="option-price">内容により別途お見積り</p>
+
+
+        <!-- 長距離パック -->
+        <div class="plan-card" id="tyuokyori">
+          <div class="plan-text">
+            <div class="plan-header">
+              <img src="img/" alt="長距離パック" class="plan-title-img">
+              <div class="price">66,000円～</div>
+            </div>
+            <p><strong>対応エリア：</strong><br>　　関東～関西<br>　　沖縄、離島引越対応</p>
+          </div>
         </div>
       </div>
+    </div>
+
+
+
+
+    <!-- 各種オプション -->
+    <h2 class="plan-extra-title">各種オプション</h2>
+    <div class="plan-extra-list">
+      <!-- 無料オプション -->
+      <div class="plan-extra-card free-option">
+        <img src="img/MURYOU_OP_BOTAN.png" alt="無料オプション" class="option-title">
+
+        <ul>
+          <li>ダンボール20箱、ガムテープの無料配送</li>
+          <li>ハンガーボックス貸出</li>
+          <li>ベッドの解体、組み立て作業</li>
+          <li>洗濯機の取り外し、取り付け</li>
+          <li>冷蔵庫の取り外し、取り付け</li>
+          <li>大型家具の梱包配置</li>
+          <li>布団袋サービス</li>
+          <li>家具・家電の簡易梱包</li>
+          <li>養生作業</li>
+          <li>粗大ごみの荷下ろし</li>
+          <li>荷物損害保険</li>
+        </ul>
+      </div>
+      <!-- 時間指定 -->
+      <div class="plan-extra-card time-option">
+        <img src="img/ZIKANSHITEI_BOTAN.png" alt="時間指定" class="option-title">
+        <p>午前・午後・夕方などご希望の時間帯でお引越し可能です。<br>
+          お忙しい方やスケジュール重視の方におすすめ！</p>
+        <p class="option-price">+3,000円～</p>
+      </div>
+      <!-- 特殊作業プラン -->
+      <div class="plan-extra-card special-option">
+        <img src="img/TOKUSYU_BOTAN.png" alt="特殊作業" class="option-title">
+        <ul>
+          <li>お荷物の一時保管</li>
+          <li>エアコンの取り外し・取り付け</li>
+          <li>大型家具の分解・組立</li>
+          <li>吊り上げ・吊り下げ作業</li>
+          <li>ピアノ・金庫・バイク運搬</li>
+          <li>不用品回収</li>
+        </ul>
+        <p class="option-price">内容により別途お見積り</p>
+      </div>
+    </div>
     </div>
   </section>
 
@@ -224,14 +244,28 @@
   </section>
 
 
-  <img src="img/mamu_google.png" alt="口コミ" class="hero-img-sub" />
+  <div class="google-review-slider-wrap">
+    <!-- Swiper スライダー -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="img/KUCHI_01.png" alt="スライド1" /></div>
+        <div class="swiper-slide"><img src="img/KUCHI_02.png" alt="スライド2" /></div>
+        <div class="swiper-slide"><img src="img/KUCHI_03.png" alt="スライド3" /></div>
+        <div class="swiper-slide"><img src="img/KUCHI_04.png" alt="スライド4" /></div>
+        <div class="swiper-slide"><img src="img/KUCHI_05.png" alt="スライド5" /></div>
+      </div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
 
-  <div class="google-review-btn-wrap">
-    <a href="https://www.google.com/search?kgmid=/g/11v43sxb37&hl=ja-JP&q=%E7%9C%9F%E5%A4%A2+%EF%BC%88%E3%83%9E%E3%83%A0%EF%BC%89%E5%BC%95%E8%B6%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E6%9D%B1%E4%BA%AC%E6%94%AF%E5%BA%97&shndl=30&shem=lcuae&source=sh/x/loc/osrp/m5/1&kgs=65c6ab1b256fd60b#"
-      target="_blank" rel="noopener" class="google-review-btn">
-      <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
-      Google口コミを見る
-    </a>
+    <!-- Google口コミボタン -->
+    <div class="google-review-btn-wrap">
+      <a href="https://www.google.com/search?q=%E7%9C%9F%E5%A4%A2%E5%BC%95%E8%B6%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&oq=%E7%9C%9F%E5%A4%A2%E5%BC%95%E8%B6%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDMyMjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x60189129d8b97a0d:0xe51b4c8f7ac22498,1,,,,"
+        target="_blank" rel="noopener" class="google-review-btn">
+        <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
+        Google口コミを見る
+      </a>
+    </div>
   </div>
 
 
@@ -249,3 +283,5 @@
 
 
 </html>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
