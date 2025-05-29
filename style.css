@@ -641,16 +641,21 @@ body {
 
 .calendar-frame {
   flex: 1 1 45%;
-  /* 幅は最大で約45%、余裕をもたせる */
   min-width: 300px;
-  /* 小さい画面でもある程度の幅を確保 */
-  height: 500px;
-  /* カレンダーの高さは調整可 */
+  height: 50vh;
   border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   pointer-events: none;
 }
+
+@media (max-width: 600px) {
+
+  .calendar-frame {
+    height: 40vh;
+  }
+}
+
 
 
 
