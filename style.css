@@ -595,33 +595,21 @@ body {
 .estimate-buttons {
   display: flex;
   justify-content: center;
-  gap: 1.2em;
+  /* 中央寄せ */
+  align-items: center;
+  gap: 20px;
+  /* 画像同士の間隔 */
   flex-wrap: wrap;
-  margin-bottom: 1.2em;
+  /* 画面が狭いとき折り返す（任意） */
+  margin: 20px 0;
 }
 
-.estimate-line,
-.estimate-phone {
-  background: linear-gradient(90deg, #06C755, #00b368);
-  color: white;
-  padding: 1em 2.2em;
-  border-radius: 2em;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1.15rem;
-  box-shadow: 0 2px 8px rgba(6, 199, 85, 0.08);
-  transition: background 0.3s, transform 0.2s;
+.estimate-buttons a img {
+  width: 12vw;
+  /* 画面幅が広くても大きくなりすぎないように */
+  height: auto;
 }
 
-.estimate-phone {
-  background: linear-gradient(90deg, #e48fb1, #f37da0);
-}
-
-.estimate-line:hover,
-.estimate-phone:hover {
-  opacity: 0.92;
-  transform: translateY(-2px) scale(1.04);
-}
 
 .estimate-note {
   color: #888;
