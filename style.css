@@ -1,3 +1,13 @@
+.container {
+  width: 1200px;
+  min-width: 1200px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+
 /* ===== ヘッダー＋ナビゲーションバーをまとめて固定 ===== */
 .header-fixed-wrap {
   position: fixed;
@@ -713,6 +723,19 @@ body {
   z-index: 2;
 }
 
+
+.price-bg {
+  background: url('img/RYOUKIN.png') no-repeat center/contain;
+  background: size 230px;
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  border-radius: 1.5em;
+  color: #fff;
+  /* 画像に合わせて調整 */
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 .plan-title-img {
   width: 230px;
   height: auto;
@@ -802,7 +825,9 @@ body {
   background: #d06b9a;
 }
 
-/* style.cssに追加 */
+
+
+
 .plan-detail-btn-wrap {
   text-align: center;
   margin: 2em 0 0.5em 0;

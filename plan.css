@@ -60,6 +60,22 @@
     text-align: center;
 }
 
+.price-bg {
+    background: url('img/RYOUKIN.png') no-repeat center center;
+    background-size: 140px 48px;
+    /* 画像サイズはお好みで調整 */
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    border-radius: 1.5em;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    min-width: 120px;
+    min-height: 40px;
+    line-height: 48px;
+    text-align: center;
+}
+
 .plan-title-img {
     display: inline-block;
     max-width: 100%;
