@@ -110,121 +110,128 @@
 
 
 
-      <div class="google-review-slider-wrap">
-        <!-- Swiper スライダー -->
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/KUCHI_01.png" alt="スライド1" /></div>
-            <div class="swiper-slide"><img src="img/KUCHI_02.png" alt="スライド2" /></div>
-            <div class="swiper-slide"><img src="img/KUCHI_03.png" alt="スライド3" /></div>
-            <div class="swiper-slide"><img src="img/KUCHI_04.png" alt="スライド4" /></div>
-            <div class="swiper-slide"><img src="img/KUCHI_05.png" alt="スライド5" /></div>
+      <section class="hero-section hero-full">
+        <!-- 1. 画像（画面幅いっぱい） -->
+        <img src="img/mamu_TOP_2kai5.png" alt="メイン画像" class="hero-main-img-full">
+
+        <!-- 2. スライダーゾーン（箱の中で5枚スライド） -->
+        <div class="slider-box">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/KUCHI_01.png" alt="スライド1"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_02.png" alt="スライド2"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_03.png" alt="スライド3"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_04.png" alt="スライド4"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_05.png" alt="スライド5"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
         </div>
 
-        <!-- Google口コミボタン -->
+        <!-- 3. 画像画像（2枚横並び） -->
+        <div class="hero-double-img">
+          <img src="img/KUCHIKOMI.png" alt="サブ画像1">
+        </div>
+
+        <!-- 4. 口コミボタン -->
         <div class="google-review-btn-wrap">
-          <a href="https://www.google.com/search?q=%E7%9C%9F%E5%A4%A2%E5%BC%95%E8%B6%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&oq=%E7%9C%9F%E5%A4%A2%E5%BC%95%E8%B6%8A%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC&gs_lcrp=EgZjaHJvbWUqDggAEEUYJxg7GIAEGIoFMg4IABBFGCcYOxiABBiKBTIHCAEQABiABDIKCAIQABiABBiiBDIKCAMQABiABBiiBDIKCAQQABiABBiiBDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDMyMjdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x60189129d8b97a0d:0xe51b4c8f7ac22498,1,,,,"
-            target="_blank" rel="noopener" class="google-review-btn">
+          <a href="https://www.google.com/search?q=真夢引越センター" target="_blank" rel="noopener" class="google-review-btn">
             <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
             Google口コミを見る
           </a>
         </div>
-      </div>
-
-    </section>
+      </section>
 
 
 
 
 
-    <section class="calendar-section">
-      <h2 class="title">予約状況カレンダー</h2>
-      <div class="calendar-container">
-        <iframe id="iframe-this-month" src="" title="今月の予約状況" class="calendar-frame" frameborder="0" scrolling="no"
-          style="border:0"></iframe>
+      <section class="calendar-section">
+        <h2 class="title">予約状況カレンダー</h2>
+        <div class="calendar-container">
+          <iframe id="iframe-this-month" src="" title="今月の予約状況" class="calendar-frame" frameborder="0" scrolling="no"
+            style="border:0"></iframe>
 
-        <iframe id="iframe-next-month" src="" title="翌月の予約状況" class="calendar-frame" frameborder="0" scrolling="no"
-          style="border:0"></iframe>
-      </div>
-    </section>
-
-    <script src="calendar.js"></script>
-
-
-
-
-
-
-
-
-
-    <section class="plan-summary">
-      <div class="container">
-        <h2>
-          <a href="plan.html" style="color: inherit; text-decoration: none; display: inline-block;">
-            料金プラン
-          </a>
-        </h2>
-        <div class="plan-summary-list">
-          <div class="plan-summary-card">
-            <img src="img/PURAN_MINI.png" alt="ミニパック" class="plan-title-img">
-            <div class="price price-bg">13,000円～</div>
-            <p>軽トラック～1.5t</p>
-            <img src="img/plan1.jpg" alt="単身パック小" class="plan-summary-img" />
-            <p class="plan-comment">
-              荷物が少なめの人にちょうどいい！<br>
-              家具家電つき物件の引越しにも◎
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_TANshin.png" alt="単身パック" class="plan-title-img">
-            <div class="price price-bg">18,000円～</div>
-            <p>2tショート～2tロング</p>
-            <img src="img/plan2.jpg" alt="単身パック大" class="plan-summary-img" />
-            <p class="plan-comment">
-              家電とかちょっと多めでも大丈夫！<br>
-              ひとり暮らしの引越しにおすすめ！
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_2HITO.png" alt="二人暮らしパック" class="plan-title-img">
-            <div class="price price-bg">30,000円～</div>
-            <p>2tロング～3t</p>
-            <img src="img/plan3.jpg" alt="二人暮らしパック" class="plan-summary-img" />
-            <p class="plan-comment">
-              ふたり分の荷物もまとめてOK！<br>
-              カップルや新婚さんにぴったり♪
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_FAMI.png" alt="ファミリーパック" class="plan-title-img">
-            <div class="price price-bg">50,000円～</div>
-            <p>3t～4t</p>
-            <img src="img/plan4.jpg" alt="ファミリーパック" class="plan-summary-img" />
-            <p class="plan-comment">
-              荷物が多くても安心！<br>
-              家族みんなでのお引越しにおすすめ！
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_CHOKYORI.png" alt="長距離パック" class="plan-title-img">
-            <div class="price price-bg">66,000円～</div>
-            <p>3t～4t</p>
-            <img src="img/zennkoku.jpg" alt="長距離パック" class="plan-summary-img" />
-            <p class="plan-comment">
-              北海道～沖縄まで！<br>
-              離島引越も対応します！
-            </p>
-          </div>
+          <iframe id="iframe-next-month" src="" title="翌月の予約状況" class="calendar-frame" frameborder="0" scrolling="no"
+            style="border:0"></iframe>
         </div>
+      </section>
 
-    </section>
-    <div class="plan-detail-btn-wrap">
-      <a href="plan.html" class="plan-detail-btn">詳しい料金プランを見る</a>
-    </div>
+      <script src="calendar.js"></script>
+
+
+
+
+
+
+
+
+
+      <section class="plan-summary">
+        <div class="container">
+          <h2>
+            <a href="plan.html" style="color: inherit; text-decoration: none; display: inline-block;">
+              料金プラン
+            </a>
+          </h2>
+          <div class="plan-summary-list">
+            <div class="plan-summary-card">
+              <img src="img/PURAN_MINI.png" alt="ミニパック" class="plan-title-img">
+              <div class="price price-bg">13,000円～</div>
+              <p>軽トラック～1.5t</p>
+              <img src="img/plan1.jpg" alt="単身パック小" class="plan-summary-img" />
+              <p class="plan-comment">
+                荷物が少なめの人にちょうどいい！<br>
+                家具家電つき物件の引越しにも◎
+              </p>
+            </div>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_TANshin.png" alt="単身パック" class="plan-title-img">
+              <div class="price price-bg">18,000円～</div>
+              <p>2tショート～2tロング</p>
+              <img src="img/plan2.jpg" alt="単身パック大" class="plan-summary-img" />
+              <p class="plan-comment">
+                家電とかちょっと多めでも大丈夫！<br>
+                ひとり暮らしの引越しにおすすめ！
+              </p>
+            </div>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_2HITO.png" alt="二人暮らしパック" class="plan-title-img">
+              <div class="price price-bg">30,000円～</div>
+              <p>2tロング～3t</p>
+              <img src="img/plan3.jpg" alt="二人暮らしパック" class="plan-summary-img" />
+              <p class="plan-comment">
+                ふたり分の荷物もまとめてOK！<br>
+                カップルや新婚さんにぴったり♪
+              </p>
+            </div>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_FAMI.png" alt="ファミリーパック" class="plan-title-img">
+              <div class="price price-bg">50,000円～</div>
+              <p>3t～4t</p>
+              <img src="img/plan4.jpg" alt="ファミリーパック" class="plan-summary-img" />
+              <p class="plan-comment">
+                荷物が多くても安心！<br>
+                家族みんなでのお引越しにおすすめ！
+              </p>
+            </div>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_CHOKYORI.png" alt="長距離パック" class="plan-title-img">
+              <div class="price price-bg">66,000円～</div>
+              <p>3t～4t</p>
+              <img src="img/zennkoku.jpg" alt="長距離パック" class="plan-summary-img" />
+              <p class="plan-comment">
+                北海道～沖縄まで！<br>
+                離島引越も対応します！
+              </p>
+            </div>
+          </div>
+
+      </section>
+      <div class="plan-detail-btn-wrap">
+        <a href="plan.html" class="plan-detail-btn">詳しい料金プランを見る</a>
+      </div>
   </main>
 
 

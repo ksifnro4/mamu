@@ -16,7 +16,7 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
-    slidesPerView: 2.0,      // 1枚半ぐらい見える感じに（調整可）
+    slidesPerView: 1,      // 1枚半ぐらい見える感じに（調整可）
     centeredSlides: true,    // 現在のスライドを中央に配置
 
     spaceBetween: 20,
