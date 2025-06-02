@@ -1,4 +1,35 @@
 /* flow.cssに追加・修正例 */
+
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding-top: 80px;
+    /* ヘッダーやナビバーの高さに合わせて調整 */
+}
+
+
+
+/* スマホやタブレット時の余白調整 */
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .content {
+        padding-top: 0px;
+        /* スマホ用に余白を増やす場合 */
+    }
+}
+
 .content header h1 {
     font-size: clamp(1.8rem, 5vw, 2.6rem);
     color: #fff;
@@ -26,10 +57,25 @@
 }
 
 .flow-lead {
-    color: #fff;
-    font-size: 1.1rem;
-    margin: 0;
-    letter-spacing: 0.02em;
+    color: #000;
+    font-size: 1.2rem;
+    margin: 1.5em auto 1.5em auto;
+    letter-spacing: 0.04em;
+    text-align: center;
+    max-width: 700px;
+    padding: 1em 2em;
+    background: linear-gradient(90deg, #f8e8f0 0%, #e0fbe8 100%);
+    border-radius: 2em;
+    box-shadow: 0 2px 16px rgba(228, 143, 177, 0.10);
+    font-weight: 600;
+    border: 2px solid #e48fb1;
+}
+
+@media screen and (max-width: 600px) {
+    .flow-lead {
+        font-size: 0.8rem;
+        padding: 0.7em 1em;
+    }
 }
 
 .flow-wrapper {
@@ -52,18 +98,21 @@
     font-size: 1rem;
     font-weight: 500;
     position: relative;
+    border: 4px solid #000
 }
 
 .flow-step {
     display: inline-block;
-    background: #e48fb1;
-    color: #fff;
+    font-size: 3em;
+    /* お好みで2emなどさらに大きく */
     font-weight: bold;
+    color: #fff;
+    background: #e48fb1;
     border-radius: 1em;
-    padding: 0.2em 1.2em;
+    padding: 0.2em 1em;
     margin-bottom: 0.5em;
-    font-size: 1rem;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
 }
 
 .arrow {
@@ -80,6 +129,8 @@
     .flow-card {
         padding: 1em 0.7em;
         min-width: 0;
-        max-width: 98vw;
+        max-width: 95vw;
+        width: 95vw;
+        box-sizing: border-box;
     }
 }

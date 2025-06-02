@@ -1,4 +1,33 @@
 /* ===== プラン一覧 ===== */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+.content {
+    padding-top: 80px;
+    /* ヘッダーやナビバーの高さに合わせて調整 */
+}
+
+
+
+/* スマホやタブレット時の余白調整 */
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .content {
+        padding-top: 0px;
+        /* スマホ用に余白を増やす場合 */
+    }
+}
+
 .content header h1 {
     font-size: clamp(1.8rem, 5vw, 2.6rem);
     color: #fff;
@@ -25,15 +54,18 @@
     margin-bottom: 2em;
 }
 
+
+
+
+
 .plan-list {
     display: flex;
-    flex-wrap: nowrap;
-    /* 折り返さず横並び */
+    flex-wrap: wrap;
+    /* 横並び→折り返し可に */
     gap: 2vw;
     justify-content: center;
     align-items: stretch;
-    overflow-x: auto;
-    /* 画面が狭いときは横スクロール */
+    /* overflow-x: auto; ← wrapなら不要 */
 }
 
 .plan-card {
@@ -41,51 +73,80 @@
     border-radius: 1vw;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
     padding: 2vw 2vw 1vw 2vw;
-    width: 22%;
-    /* 4枚で100%になるよう調整 */
+    width: 30%;
     min-width: 220px;
-    /* カードの最小幅 */
     max-width: 320px;
-    /* カードの最大幅 */
     margin-bottom: 2vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     box-sizing: border-box;
     height: 100%;
-    /* 縦長に揃える */
 }
 
 .plan-header {
     text-align: center;
 }
 
-.price-bg {
-    background: url('img/RYOUKIN.png') no-repeat center center;
-    background-size: 140px 48px;
-    /* 画像サイズはお好みで調整 */
+
+.price-bb {
+    position: relative;
     display: inline-block;
-    padding: 0.3em 1.2em;
-    border-radius: 1.5em;
+    padding: 0.3em 3.8em;
     color: #fff;
     font-weight: bold;
-    font-size: 1.2em;
-    min-width: 120px;
-    min-height: 40px;
-    line-height: 48px;
-    text-align: center;
+    font-size: em;
+    overflow: hidden;
+    background: none;
 }
+
+.price-bb-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+.price-bb span {
+    position: relative;
+    z-index: 1;
+    font-size: 1em;
+    /* ← ここを追加。お好みで0.9emや0.85emでもOK */
+    font-weight: bold;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    /* 折り返し防止（必要なら） */
+}
+
 
 .plan-title-img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
+    width: 250px;
+    /* タイトル画像を大きく */
+    margin-bottom: 1em;
 }
 
-.price {
-    margin-top: 10px;
-    font-size: 1.2em;
-    font-weight: bold;
+.price.price-bb span {
+    font-size: 1.3em;
+    /* 金額テキストを大きく */
+}
+
+.plan-header {
+    margin-bottom: 1.2em;
+}
+
+.plan-text p,
+.plan-text ul {
+    font-size: 1.08em;
+    /* 説明文やリストも少し大きく */
+}
+
+.plan-text li {
+    margin-bottom: 0.3em;
 }
 
 
@@ -130,19 +191,6 @@
     background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
 }
 
-.plan-card .price {
-    font-size: 1.5rem;
-    color: #fff;
-    background: linear-gradient(90deg, #e48fb1 0%, #06C755 100%);
-    padding: 0.4em 1.2em;
-    border-radius: 2em;
-    font-weight: bold;
-    margin: 0.7em 0 0.5em 0;
-    box-shadow: 0 2px 8px rgba(228, 143, 177, 0.12);
-    display: inline-block;
-    letter-spacing: 0.05em;
-}
-
 .plan-card ul {
     margin: 0.5em 0 0 1.2em;
     padding: 0;
@@ -158,22 +206,23 @@
     color: #333;
 }
 
-@media screen and (max-width: 900px) {
-    .container {
-        padding: 4vw 2vw;
-    }
-
+@media screen and (max-width: 600px) {
     .plan-list {
         flex-direction: column;
+        align-items: center;
         gap: 4vw;
     }
 
     .plan-card {
-        width: 95vw;
-        max-width: 98vw;
+        width: 90vw;
+        max-width: 340px;
         min-width: 0;
         padding: 4vw 2vw 2vw 2vw;
         margin-bottom: 0;
+    }
+
+    .plan-title-img {
+        max-width: 90vw;
     }
 }
 
@@ -268,17 +317,15 @@
     margin-top: 0.5em;
 }
 
-@media screen and (max-width: 900px) {
-    .plan-extra-list {
-        flex-direction: column;
-        gap: 4vw;
-    }
+@media screen and (max-width: 600px) {
 
-    .plan-extra-card {
-        width: 95vw;
-        max-width: 98vw;
-        min-width: 0;
-        padding: 4vw 2vw 2vw 2vw;
-        margin-bottom: 0;
+    .plan-title-img,
+    .plan-main-img,
+    .plan-summary-img {
+        max-width: 90vw;
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
     }
 }

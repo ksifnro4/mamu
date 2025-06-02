@@ -1,3 +1,30 @@
+.content {
+    padding-top: 80px;
+    /* ヘッダーやナビバーの高さに合わせて調整 */
+}
+
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+
+    .content {
+        padding-top: 0px;
+    }
+}
+
+
 .content header h1 {
     font-size: clamp(1.8rem, 5vw, 2.6rem);
     color: #fff;

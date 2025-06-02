@@ -1,13 +1,3 @@
-.container {
-  width: 1200px;
-  min-width: 1200px;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
-}
-
-
 /* ===== ヘッダー＋ナビゲーションバーをまとめて固定 ===== */
 .header-fixed-wrap {
   position: fixed;
@@ -185,7 +175,7 @@
 }
 
 /* ===== スマホ対応 ===== */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .header-top {
     padding: 2vw 2vw;
   }
@@ -345,24 +335,20 @@ body {
 
 /* bodyの上余白を調整（ヘッダー＋ナビバーの高さ分） */
 body {
-  padding-top: calc(4vw + 1.2vw + 48px);
-  /* ヘッダー高さ＋ナビバー高さ */
   background:
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
     url("img/mamu_haikei2.png") repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
+  padding-top: 100px;
 }
 
 /* ===== HEROセクション ===== */
 .hero {
   width: 100%;
-  /* 画面幅ぴったり */
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  position: relative;
-  background: linear-gradient(135deg, #f8e9f0 0%, #e6f3fa 100%);
 }
 
 .hero-img {
@@ -425,14 +411,15 @@ body {
 
 
 .hero-section {
-  width: 100vm;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
-  background-color: #ffffff
+  background-color: #fff;
 }
 
 .hero-main-img {
-  width: 100vw;
+  width: 1200px;
   height: auto;
   display: block;
   margin-bottom: 24px;
@@ -457,16 +444,6 @@ body {
 }
 
 
-@media screen and (max-width: 600px) {
-  .swiper-container {
-    transform: scale(0.6) translateY(-50%);
-    transform-origin: center top;
-    /* 上中央を基準に縮小 */
-    top: 65%;
-  }
-}
-
-
 
 
 .slider-box {
@@ -486,12 +463,47 @@ body {
   margin: 0 auto;
 }
 
+
+
 .swiper-slide img {
   width: 100%;
   height: auto;
   border-radius: 12px;
   display: block;
 }
+
+@media screen and (max-width: 600px) {
+  .slider-box {
+    width: 100vw;
+    max-width: 100vw;
+    margin: 32px 0 24px 0;
+    padding: 0;
+    border-radius: 0;
+    background: #fff;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    position: relative;
+  }
+
+  .swiper-container {
+    width: 100vw;
+    height: 35vw;
+    max-width: 100vw;
+    min-width: 0;
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .swiper-slide img {
+    width: 100vw;
+    height: 35vw;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+  }
+}
+
 
 .swiper-slide {
   opacity: 0;
@@ -509,12 +521,13 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #fff;
+  background: #ffffff;
   padding: 8px 16px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   color: #000;
+  border: 2px solid #000000;
 }
 
 .google-logo {
@@ -639,8 +652,17 @@ body {
 
 .estimate-buttons a img {
   width: 12vw;
-  /* 画面幅が広くても大きくなりすぎないように */
   height: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .estimate-buttons a img {
+    width: 48vw;
+    /* スマホ時は大きく表示 */
+    max-width: 180px;
+    min-width: 80px;
+    height: auto;
+  }
 }
 
 
@@ -747,18 +769,6 @@ body {
 }
 
 
-.price-bg {
-  background: url('img/RYOUKIN.png') no-repeat center/contain;
-  background: size 230px;
-  display: inline-block;
-  padding: 0.3em 1.2em;
-  border-radius: 1.5em;
-  color: #fff;
-  /* 画像に合わせて調整 */
-  font-weight: bold;
-  font-size: 1.2em;
-}
-
 .plan-title-img {
   width: 230px;
   height: auto;
@@ -767,20 +777,58 @@ body {
 }
 
 
-.plan-summary-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2vw;
-  justify-content: center;
-  align-items: stretch;
+.price-bg {
+  position: relative;
+  display: inline-block;
+  padding: 0.3em 3.8em;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+  overflow: hidden;
+  background: none;
 }
+
+.price-bg-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+.price-bg span {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+
+
+.plan-summary-list-3 {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.plan-summary-list-2 {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
 
 .plan-summary-card {
   background: #fff;
   border-radius: 1vw;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
   padding: 1.5vw 1vw 1vw 1vw;
-  width: 22%;
+  width: 20%;
   min-width: 200px;
   max-width: 260px;
   text-align: center;
@@ -808,7 +856,7 @@ body {
 }
 
 /* レスポンシブ対応：スマホやタブレットでは縦並び */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
   .plan-summary-list {
     flex-direction: column;
     align-items: center;

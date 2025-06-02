@@ -48,6 +48,21 @@ h3 {
     /* 画像高さ分の最小高さを確保 */
 }
 
+@media screen and (max-width: 600px) {
+    .qa-card {
+        background-size: 90vw 100%;
+        background-position: left  center;
+        padding-left: 10px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-right: 10px;
+        font-size: 0.98em;
+        height: auto;
+        text-align: left;
+        /* テキスト左寄せ */
+    }
+}
+
 .qa-card strong {
     display: block;
     margin-bottom: 5px;
@@ -60,7 +75,7 @@ label {
     margin-top: 10px;
 }
 
-input[type="text"],
+input[type="text"], 
 input[type="email"],
 textarea {
     width: 100%;
@@ -103,5 +118,10 @@ textarea {
 }
 
 .contact-card {
-    margin-top: 40px;
+    background: linear-gradient(120deg, #f8e8f0 0%, #e0fbe8 100%);
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px rgba(228, 143, 177, 0.10);
+    padding: 2em 1.5em;
+    margin: 2em auto;
+    max-width: 1200px;
 }

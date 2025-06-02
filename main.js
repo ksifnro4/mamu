@@ -16,25 +16,21 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
 document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
-    slidesPerView: 1,      // 1枚半ぐらい見える感じに（調整可）
-    centeredSlides: true,    // 現在のスライドを中央に配置
-
+    slidesPerView: 1,
+    centeredSlides: true,
     spaceBetween: 20,
-
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
-    simulateTouch: true,
-
+    simulateTouch: window.innerWidth <= 600, // 600px以下のみタッチ操作有効
     breakpoints: {
-      768: {
-        slidesPerView: 1.3,
-        spaceBetween: 30,
+      600: {
+        slidesPerView: 1,
+        spaceBetween: 20,
         centeredSlides: true,
+        simulateTouch: false, // 600px超はタッチ操作無効
       }
     }
   });
-
 });
