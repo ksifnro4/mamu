@@ -470,6 +470,16 @@ body {
   height: auto;
   border-radius: 12px;
   display: block;
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 2.5s cubic-bezier(.4, 0, .2, 1),
+    transform 2.5s cubic-bezier(.4, 0, .2, 1);
+}
+
+.swiper-slide-active img {
+  opacity: 1;
+  transform: scale(1);
 }
 
 @media screen and (max-width: 600px) {
