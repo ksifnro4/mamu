@@ -692,6 +692,16 @@ body {
   gap: 1.5rem;
   flex-wrap: wrap;
   /* 小さい画面では縦並びに切り替え */
+  opacity: 0;
+  transform: translateY(150px) scale(0.92);
+  transition:
+    opacity 1.8s cubic-bezier(.4, 0, .2, 1),
+    transform 1.8s cubic-bezier(.4, 0, .2, 1);
+}
+
+.calendar-container.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 .calendar-frame {
@@ -721,8 +731,8 @@ body {
   transform: translateY(150px) scale(0.92);
   /* 最初は少し小さく */
   transition:
-    opacity 100ms cubic-bezier(.4, 0, .2, 1),
-    transform 100ms cubic-bezier(.4, 0, .2, 1);
+    opacity 1.5s cubic-bezier(.4, 0, .2, 1),
+    transform 1.5s cubic-bezier(.4, 0, .2, 1);
 }
 
 .plan-summary-card.is-visible {
