@@ -715,7 +715,25 @@ body {
 
 
 /* ===== 料金プラン（抜粋）セクション ===== */
+
+.plan-summary-card {
+  opacity: 0;
+  transform: translateY(150px) scale(0.92);
+  /* 最初は少し小さく */
+  transition:
+    opacity 100ms cubic-bezier(.4, 0, .2, 1),
+    transform 100ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.plan-summary-card.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  /* 元の大きさに */
+}
+
 /* ===== 料金プラン h2 見出しデザイン ===== */
+
+
 .plan-summary h2 {
   font-size: clamp(1.4rem, 5vw, 2.4rem);
   /* 画面幅に応じて可変 */
