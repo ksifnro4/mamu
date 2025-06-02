@@ -10,6 +10,24 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
   });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const targets = document.querySelectorAll('.fadein-left, .fadein-right');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: '0px 0px -10% 0px'
+    }
+  );
+  targets.forEach(el => observer.observe(el));
+});
 
 
 
@@ -36,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// main.js などに追加
+
 document.addEventListener('DOMContentLoaded', () => {
   const targets = document.querySelectorAll('.plan-summary-card');
   const observer = new IntersectionObserver(
