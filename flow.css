@@ -91,7 +91,7 @@
     border-radius: 1em;
     box-shadow: 0 2px 16px rgba(228, 143, 177, 0.08);
     padding: 1.2em 2em;
-    min-width: 220px;
+    min-width: 0px;
     max-width: 1800px;
     width: 100%;
     text-align: center;

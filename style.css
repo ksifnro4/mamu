@@ -536,11 +536,13 @@ body {
 }
 
 .swiper-container {
-  width: 800px;
-  max-width: 90vw;
+  width: 100%;
+  /* ここを100%に */
+  max-width: 900px;
+  /* 親と同じに */
   margin: 0 auto;
+  box-sizing: border-box;
 }
-
 
 
 .swiper-slide img {
