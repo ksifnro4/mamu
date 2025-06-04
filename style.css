@@ -351,12 +351,22 @@
   gap: 1em;
   z-index: 2;
   transform: translateX(-50%);
-  /* これを追加で中央揃え */
 }
 
 .row-1 {
   top: 15%;
   width: 350px;
+}
+
+.row-1 .hero-img {
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity 0.4s cubic-bezier(.4, 0, .2, 1), transform 1.2s cubic-bezier(.4, 0, .2, 1);
+}
+
+.row-1 .hero-img.is-visible {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .row-2 {
@@ -374,6 +384,17 @@
   width: 200px;
 }
 
+.row-4 .hero-img {
+  opacity: 0;
+  transform: translateY(180px) scale(0.4);
+  transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1)0.3s, transform 1.2s cubic-bezier(.4, 0, .2, 1)0.3s;
+}
+
+.row-4 .hero-img.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 .hero-img {
   width: 100%;
   opacity: 0;
@@ -387,7 +408,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  
+
   .hero-img-stack {
     width: 100vw;
     height: 120vw;
@@ -617,6 +638,11 @@ body {
   box-shadow: 0 8px 32px rgba(228, 143, 177, 0.10);
   position: relative;
   overflow: hidden;
+  max-width: 1200px;
+  /* 横幅最大1200pxを追加 */
+  margin-left: auto;
+  /* 中央寄せ */
+  margin-right: auto;
 }
 
 .estimate-box {
