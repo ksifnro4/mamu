@@ -1083,7 +1083,7 @@ body {
   max-width: 1200px;
   margin: 2em auto 2em auto;
   padding: 1.5em 1em;
-  background: linear-gradient(120deg, #e0f0ff 0%, #b3d8ff 100%);
+  background: linear-gradient(120deg, #e0f0ff 0%, #ffffff 100%);
   border-radius: 1.5em;
   display: flex;
   flex-direction: column;
