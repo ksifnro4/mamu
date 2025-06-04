@@ -858,6 +858,18 @@ body {
 
 /* ===== 料金プラン h2 見出しデザイン ===== */
 
+.plan-summary .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.plan-summary h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 1.2em;
+}
+
 
 .plan-summary h2 {
   font-size: clamp(1.4rem, 5vw, 2.4rem);
