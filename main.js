@@ -139,3 +139,23 @@ document.addEventListener('DOMContentLoaded', () => {
   );
   images.forEach(img => observer.observe(img));
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const creditZone = document.querySelector('.credit-card-zone');
+  if (creditZone) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            creditZone.classList.add('is-visible');
+            observer.unobserve(creditZone);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(creditZone);
+  }
+});
