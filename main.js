@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     (entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // その行の画像を順番にアニメーション
           const imgs = entry.target.querySelectorAll('.hero-img');
           imgs.forEach((img, i) => {
             setTimeout(() => {
