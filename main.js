@@ -10,6 +10,33 @@ document.querySelectorAll('.nav-bar a').forEach(link => {
   });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const rows = document.querySelectorAll('.hero-img-row');
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // その行の画像を順番にアニメーション
+          const imgs = entry.target.querySelectorAll('.hero-img');
+          imgs.forEach((img, i) => {
+            setTimeout(() => {
+              img.classList.add('is-visible');
+            }, i * 200);
+          });
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  rows.forEach(row => observer.observe(row));
+});
+
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const targets = document.querySelectorAll('.fadein-left, .fadein-right');
   const observer = new IntersectionObserver(

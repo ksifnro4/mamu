@@ -323,6 +323,127 @@
   }
 }
 
+/* ===== HEROセクション ===== */
+.hero-img-stack {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  margin: 0 auto;
+}
+
+.hero-img-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.hero-img-row {
+  position: absolute;
+  left: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  z-index: 2;
+  transform: translateX(-50%);
+  /* これを追加で中央揃え */
+}
+
+.row-1 {
+  top: 15%;
+  width: 350px;
+}
+
+.row-2 {
+  top: 30%;
+  width: 600px;
+}
+
+.row-3 {
+  top: 45%;
+  width: 500px;
+}
+
+.row-4 {
+  top: 75%;
+  width: 200px;
+}
+
+.hero-img {
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.8) translateY(40px);
+  transition: opacity 1s cubic-bezier(.4, 0, .2, 1), transform 1s cubic-bezier(.4, 0, .2, 1);
+}
+
+.hero-img.is-visible {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
+@media screen and (max-width: 600px) {
+  .hero-img-stack {
+    width: 100vw;
+    height: 60vw;
+    min-width: 0;
+    min-height: 0;
+  }
+
+  .hero-img-bg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-img-row {
+    width: 100vw;
+    gap: 2vw;
+  }
+
+  .row-1,
+  .row-2,
+  .row-3,
+  .row-4 {
+    width: 100vw;
+  }
+
+  .row-1 {
+    top: 10%;
+  }
+
+  .row-2 {
+    top: 25%;
+  }
+
+  .row-3 {
+    top: 40%;
+  }
+
+  .row-4 {
+    top: 70%;
+  }
+
+  .row-1 .hero-img {
+    width: 22vw;
+  }
+
+  .row-2 .hero-img {
+    width: 32vw;
+  }
+
+  .row-3 .hero-img {
+    width: 32vw;
+  }
+
+  .row-4 .hero-img {
+    width: 18vw;
+  }
+}
+
 
 
 html,
@@ -342,72 +463,7 @@ body {
   padding-top: 100px;
 }
 
-/* ===== HEROセクション ===== */
-.hero {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-}
 
-.hero-img {
-  width: 100vw;
-  /* 画面幅ぴったり */
-  min-width: 100%;
-  max-width: 100%;
-  display: block;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-.hero-img-sub {
-  width: 100vw;
-  /* 画面幅ぴったり */
-  min-width: 100%;
-  max-width: 100%;
-  display: block;
-  object-fit: cover;
-  margin: 0;
-  padding: 0;
-  position: relative;
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    padding-top: 12vw;
-  }
-
-  .hero-img {
-    width: 120vw;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero-img-sub {
-    width: 120vw;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero {
-    padding: 0;
-    min-height: unset;
-  }
-
-}
 
 
 .hero-section {
