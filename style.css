@@ -387,9 +387,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  
   .hero-img-stack {
     width: 100vw;
-    height: 60vw;
+    height: 120vw;
     min-width: 0;
     min-height: 0;
   }
@@ -424,23 +425,23 @@
   }
 
   .row-4 {
-    top: 70%;
+    top: 75%;
   }
 
   .row-1 .hero-img {
-    width: 22vw;
+    width: 45vw;
   }
 
   .row-2 .hero-img {
-    width: 32vw;
+    width: 80vw;
   }
 
   .row-3 .hero-img {
-    width: 32vw;
+    width: 90vw;
   }
 
   .row-4 .hero-img {
-    width: 18vw;
+    width: 30vw;
   }
 }
 
