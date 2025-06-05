@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
         slidesPerView: 1,
         spaceBetween: 20,
         centeredSlides: true,
-        simulateTouch: false, // 600px超はタッチ操作無効
+        simulateTouch: false,
       }
     }
   });
