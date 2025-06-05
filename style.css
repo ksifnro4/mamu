@@ -23,7 +23,7 @@
 
 .fixed-bottom-link:hover {
   background: #059e44;
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-4px) scale(0.9);
   opacity: 1;
 }
 
