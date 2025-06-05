@@ -159,3 +159,22 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(creditZone);
   }
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const estimate = document.querySelector('.estimate-section');
+  if (estimate) {
+    const observer = new IntersectionObserver(
+      (entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(estimate);
+  }
+});
