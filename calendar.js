@@ -1,5 +1,5 @@
 // calendar.js
-const calendarId = "YOUR_CALENDAR_ID"; // ここにカレンダーIDを入れてください
+const calendarId = "mamumoving.tokyo@gmail.com"; // ここにカレンダーIDを入れてください
 const baseUrl =
     "https://calendar.google.com/calendar/embed?src=" +
     encodeURIComponent(calendarId) +

@@ -1,41 +1,44 @@
-
-
 /* ===== 1分見積 ===== */
 .fixed-bottom-link {
   position: fixed;
-  right: 24px;
-  bottom: 24px;
+  right: 50px;
+  bottom: 50px;
   z-index: 3000;
-  background: #06C755;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.7em 1.6em;
-  border-radius: 2em;
-  box-shadow: 0 8px 32px rgba(6, 199, 85, 0.18);
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.7em;
+  background: none;
+  /* 背景なし */
+  color: inherit;
+  padding: 0;
+  /* 余白なし */
+  border-radius: 0;
+  box-shadow: none;
+  /* シャドウなし */
+  display: block;
+  /* 画像だけ中央寄せ */
   opacity: 0.95;
-  transition: background 0.2s, transform 0.2s;
+  transition: transform 0.2s;
+}
+
+.fixed-bottom-link img {
+  width: 120px;
+  height: auto;
+  display: block;
 }
 
 .fixed-bottom-link:hover {
-  background: #059e44;
-  transform: translateY(-4px) scale(0.9);
+  transform: translateY(-4px) scale(0.96);
   opacity: 1;
 }
 
 @media screen and (max-width: 600px) {
+  .fixed-bottom-link img {
+    width: 100px;
+  }
+
   .fixed-bottom-link {
-    font-size: 1rem;
-    padding: 0.5em 1em;
-    right: 10px;
-    bottom: 10px;
+    right: 30px;
+    bottom: 30px;
   }
 }
-
 
 
 
@@ -365,6 +368,7 @@
 }
 
 /* ===== HEROセクション ===== */
+
 .hero-img-stack {
   position: relative;
   width: 1200px;
@@ -860,23 +864,25 @@ body {
 }
 
 .calendar-frame {
-  flex: none;
   width: 600px;
-  min-width: 420px;
-  max-width: 600px;
   height: 600px;
+  min-width: 300px;
+  min-height: 300px;
+  max-width: 98vw;
+  max-height: 80vw;
   border: none;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
+  background: #fff;
   pointer-events: none;
 }
 
 @media (max-width: 900px) {
   .calendar-frame {
-    width: 90vw;
+    width: 98vw;
+    height: 80vw;
     min-width: 0;
-    max-width: 100vw;
-    height: 60vw;
+    min-height: 0;
   }
 }
 
