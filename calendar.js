@@ -1,3 +1,6 @@
+console.log("FullCalendar type:", typeof FullCalendar);
+
+
 document.addEventListener('DOMContentLoaded', function () {
     // ここにあなたのCSV公開URLを記入！
     var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUAarqIC5JiexoMdhJH5pPlIjiMmPjUPll18r4LHVsuUM_SlbqZxx8DlAF2ZpFV8Rr-V87bxD6_Dy8/pub?output=csv';
