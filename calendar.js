@@ -1,44 +1,72 @@
-// calendar.js
-const calendarId = "mamumoving.tokyo@gmail.com"; // ここにカレンダーIDを入れてください
-const baseUrl =
-    "https://calendar.google.com/calendar/embed?src=" +
-    encodeURIComponent(calendarId) +
-    "&ctz=Asia%2FTokyo&mode=MONTH&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0";
+document.addEventListener('DOMContentLoaded', function () {
+    // ここにあなたのCSV公開URLを記入！
+    var csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTUAarqIC5JiexoMdhJH5pPlIjiMmPjUPll18r4LHVsuUM_SlbqZxx8DlAF2ZpFV8Rr-V87bxD6_Dy8/pub?output=csv';
 
-function formatDate(date) {
-    return (
-        date.getFullYear().toString() +
-        String(date.getMonth() + 1).padStart(2, "0") +
-        String(date.getDate()).padStart(2, "0")
-    );
-}
+    Papa.parse(csvUrl, {
+        download: true,
+        header: true,
+        complete: function (results) {
+            var events = results.data.map(function (row) {
+                let color = '';
+                if (row.状況 === '空き') color = '#d3ffd3';
+                if (row.状況 === '混雑') color = '#ffe0e0';
+                if (row.状況 === 'おすすめ') color = '#fff5cc';
+                return {
+                    title: row.状況,
+                    start: row.日付,
+                    color: color,
+                    description: row.備考 || ''
+                };
+            });
 
-function getMonthRange(year, month) {
-    const start = new Date(year, month, 1);
-    const end = new Date(year, month + 1, 0);
-    return { start, end };
-}
+            const now = new Date();
 
-function setCalendarSrc() {
-    const now = new Date();
+            // 今月
+            var calendar1 = new FullCalendar.Calendar(document.getElementById('calendar1'), {
+                initialView: 'dayGridMonth',
+                initialDate: now,
+                events: events,
+                locale: 'ja',
+                height: 390,
+                eventDidMount: function (info) {
+                    if (info.event.extendedProps.description) {
+                        info.el.title = info.event.extendedProps.description;
+                    }
+                }
+            });
+            calendar1.render();
 
-    // 今月
-    const thisMonthRange = getMonthRange(now.getFullYear(), now.getMonth());
-    const thisMonthDates =
-        formatDate(thisMonthRange.start) + "/" + formatDate(thisMonthRange.end);
-    const thisMonthUrl = baseUrl + "&dates=" + thisMonthDates;
+            // 来月
+            const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
+            var calendar2 = new FullCalendar.Calendar(document.getElementById('calendar2'), {
+                initialView: 'dayGridMonth',
+                initialDate: nextMonth,
+                events: events,
+                locale: 'ja',
+                height: 390,
+                eventDidMount: function (info) {
+                    if (info.event.extendedProps.description) {
+                        info.el.title = info.event.extendedProps.description;
+                    }
+                }
+            });
+            calendar2.render();
 
-    // 翌月
-    const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1);
-    const nextMonthRange = getMonthRange(nextMonth.getFullYear(), nextMonth.getMonth());
-    const nextMonthDates =
-        formatDate(nextMonthRange.start) + "/" + formatDate(nextMonthRange.end);
-    const nextMonthUrl = baseUrl + "&dates=" + nextMonthDates;
-
-    // iframeにURLセット
-    document.getElementById("iframe-this-month").src = thisMonthUrl;
-    document.getElementById("iframe-next-month").src = nextMonthUrl;
-}
-
-// ページ読み込み後に呼び出す
-window.addEventListener("DOMContentLoaded", setCalendarSrc);
+            // 再来月
+            const nextNextMonth = new Date(now.getFullYear(), now.getMonth() + 2, 1);
+            var calendar3 = new FullCalendar.Calendar(document.getElementById('calendar3'), {
+                initialView: 'dayGridMonth',
+                initialDate: nextNextMonth,
+                events: events,
+                locale: 'ja',
+                height: 390,
+                eventDidMount: function (info) {
+                    if (info.event.extendedProps.description) {
+                        info.el.title = info.event.extendedProps.description;
+                    }
+                }
+            });
+            calendar3.render();
+        }
+    });
+});
