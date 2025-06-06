@@ -8,277 +8,281 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
-  <script src="calendar.js"></script>
-
 </head>
 
 <body>
-  <!-- 1分見積 固定ボタン -->
-  <a href="https://www.kachi-gumi.me/sp/index.php?id=4k86d262a3ada" class="fixed-bottom-link" target="_blank">
-    <img src="img/mitumori.png" alt="1分見積">
-  </a>
 
-  <header class="header">
-    <div class="header-fixed-wrap">
-      <div class="header-top">
-        <div class="header-top-inner">
-          <!-- ロゴ -->
-          <div class="logo-area">
-            <a href="index.html">
-              <img src="img/logo.png" alt="真夢引越センター ロゴ" class="logo-img" />
-            </a>
-            <div>
-              <h1 class="logo-text">真夢引越センター</h1>
-              <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
-            </div>
-          </div>
-          <div class="right-box">
-            <!-- LINE -->
-            <div class="line-box">
-              <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
-                rel="noopener noreferrer" class="line-link">
-                <img src="img/line.png" alt="LINEロゴ" class="line-logo" />
-                <span class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></span>
-                <img src="img/mamu_QR.png" alt="LINE QRコード" class="line-qr" />
+  </head>
+
+  <body>
+    <!-- 1分見積 固定ボタン -->
+    <a href="https://www.kachi-gumi.me/sp/index.php?id=4k86d262a3ada" class="fixed-bottom-link" target="_blank">
+      <img src="img/mitumori.png" alt="1分見積">
+    </a>
+
+    <header class="header">
+      <div class="header-fixed-wrap">
+        <div class="header-top">
+          <div class="header-top-inner">
+            <!-- ロゴ -->
+            <div class="logo-area">
+              <a href="index.html">
+                <img src="img/logo.png" alt="真夢引越センター ロゴ" class="logo-img" />
               </a>
+              <div>
+                <h1 class="logo-text">真夢引越センター</h1>
+                <p class="catch">単身・ファミリー引越しなら<br>真夢にお任せください！</p>
+              </div>
             </div>
-            <!-- 電話 -->
-            <div class="phone-box">
-              <p class="small-text">まずは電話でご相談ください！</p>
-              <a href="tel:050-3135-3930" class="tel-row">
-                <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
-                <span class="tel"><strong>050-3135-3930</strong></span>
-              </a>
-              <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+            <div class="right-box">
+              <!-- LINE -->
+              <div class="line-box">
+                <a href="https://page.line.me/378wnhjo?oat_content=url&openQrModal=true" target="_blank"
+                  rel="noopener noreferrer" class="line-link">
+                  <img src="img/line.png" alt="LINEロゴ" class="line-logo" />
+                  <span class="line-text"><strong>LINEで<br>簡単無料見積もり！</strong></span>
+                  <img src="img/mamu_QR.png" alt="LINE QRコード" class="line-qr" />
+                </a>
+              </div>
+              <!-- 電話 -->
+              <div class="phone-box">
+                <p class="small-text">まずは電話でご相談ください！</p>
+                <a href="tel:050-3135-3930" class="tel-row">
+                  <img src="img/FDicon2.png" alt="電話アイコン" class="tel-icon" />
+                  <span class="tel"><strong>050-3135-3930</strong></span>
+                </a>
+                <p class="time">受付時間 8:00〜20:00（年中無休）</p>
+              </div>
+              <!-- ハンバーガーメニュー -->
+              <button class="nav-toggle sp-only" aria-label="メニューを開く">
+                <span></span><span></span><span></span>
+              </button>
             </div>
-            <!-- ハンバーガーメニュー -->
-            <button class="nav-toggle sp-only" aria-label="メニューを開く">
-              <span></span><span></span><span></span>
-            </button>
           </div>
         </div>
-      </div>
-      <nav class="nav-bar">
-        <ul>
-          <li><a href="index.html">トップ</a></li>
-          <li><a href="plan.html">料金プラン</a></li>
-          <li><a href="about.html">会社概要</a></li>
-          <li><a href="flow.html">引越の流れ</a></li>
-          <li><a href="contact.html">Q&A・問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- ヒーローイメージ -->
-    <section class="hero">
-      <div class="hero-img-stack">
-        <img src="img/タイトル_メイン画面.png" alt="真夢引越センター メイン" class="hero-img-bg" />
-        <div class="hero-img-row row-1">
-          <img src="img/タイトル_安心.png" class="hero-img" alt="安心" />
-          <img src="img/タイトル_見積り.png" class="hero-img" alt="見積り" />
-        </div>
-        <div class="hero-img-row row-2">
-          <img src="img/タイトル_一流のスタッフ.png" class="hero-img" alt="一流のスタッフ" />
-        </div>
-        <div class="hero-img-row row-3">
-          <img src="img/mamu_LOGO.png" class="hero-img" alt="ロゴ" />
-        </div>
-        <div class="hero-img-row row-4">
-          <img src="img/タイトル_地域1位.png" class="hero-img" alt="地域1位" />
-          <img src="img/タイトル_日本全国対応.png" class="hero-img" alt="日本全国対応" />
-          <img src="img/タイトル_再誕1分見積り.png" class="hero-img" alt="再誕1分見積り" />
-        </div>
-      </div>
-
-      <section class="estimate-section">
-        <div class="estimate-box">
-          <div class="estimate-catch">
-            <span class="estimate-icon">📞📦💬</span>
-            <h2>無料お見積りはこちら！</h2>
-          </div>
-          <p class="estimate-lead">
-            LINEまたはお電話で、<span class="highlight">最短10分</span>でスピード見積もり！<br>
-            カンタンLINE受付・しつこい営業なし・ご相談だけでも大歓迎！
-          </p>
-          <p class="estimate-subtext">＼ すでに <strong class="emphasis">1,200件以上</strong> のご相談実績 ／</p>
-          <ul class="estimate-points">
-            <li>✅ ご相談だけでもOK</li>
-            <li>✅ 明確な料金提示で安心</li>
-            <li>✅ スマホからカンタン3分で完了！</li>
+        <nav class="nav-bar">
+          <ul>
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="plan.html">料金プラン</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="flow.html">引越の流れ</a></li>
+            <li><a href="contact.html">Q&A・問い合わせ</a></li>
           </ul>
-          <div class="estimate-buttons">
-            <a href="https://page.line.me/378wnhjo?openQrModal=true" target="_blank">
-              <img src="img/LINE_MITSUMORI.png" alt="LINEで見積もり" class="fadein-left">
-            </a>
-            <a href="tel:050-3135-3930">
-              <img src="img/DENWA_MITSUMORI.png" alt="電話で見積もり" class="fadein-right">
-            </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ヒーローイメージ -->
+      <section class="hero">
+        <div class="hero-img-stack">
+          <img src="img/タイトル_メイン画面.png" alt="真夢引越センター メイン" class="hero-img-bg" />
+          <div class="hero-img-row row-1">
+            <img src="img/タイトル_安心.png" class="hero-img" alt="安心" />
+            <img src="img/タイトル_見積り.png" class="hero-img" alt="見積り" />
           </div>
-          <p class="estimate-note">※即日対応も可能です。まずはお気軽にご連絡ください！</p>
+          <div class="hero-img-row row-2">
+            <img src="img/タイトル_一流のスタッフ.png" class="hero-img" alt="一流のスタッフ" />
+          </div>
+          <div class="hero-img-row row-3">
+            <img src="img/mamu_LOGO.png" class="hero-img" alt="ロゴ" />
+          </div>
+          <div class="hero-img-row row-4">
+            <img src="img/タイトル_地域1位.png" class="hero-img" alt="地域1位" />
+            <img src="img/タイトル_日本全国対応.png" class="hero-img" alt="日本全国対応" />
+            <img src="img/タイトル_再誕1分見積り.png" class="hero-img" alt="再誕1分見積り" />
+          </div>
+        </div>
+
+        <section class="estimate-section">
+          <div class="estimate-box">
+            <div class="estimate-catch">
+              <span class="estimate-icon">📞📦💬</span>
+              <h2>無料お見積りはこちら！</h2>
+            </div>
+            <p class="estimate-lead">
+              LINEまたはお電話で、<span class="highlight">最短10分</span>でスピード見積もり！<br>
+              カンタンLINE受付・しつこい営業なし・ご相談だけでも大歓迎！
+            </p>
+            <p class="estimate-subtext">＼ すでに <strong class="emphasis">1,200件以上</strong> のご相談実績 ／</p>
+            <ul class="estimate-points">
+              <li>✅ ご相談だけでもOK</li>
+              <li>✅ 明確な料金提示で安心</li>
+              <li>✅ スマホからカンタン3分で完了！</li>
+            </ul>
+            <div class="estimate-buttons">
+              <a href="https://page.line.me/378wnhjo?openQrModal=true" target="_blank">
+                <img src="img/LINE_MITSUMORI.png" alt="LINEで見積もり" class="fadein-left">
+              </a>
+              <a href="tel:050-3135-3930">
+                <img src="img/DENWA_MITSUMORI.png" alt="電話で見積もり" class="fadein-right">
+              </a>
+            </div>
+            <p class="estimate-note">※即日対応も可能です。まずはお気軽にご連絡ください！</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- サブヒーロー・口コミスライダー -->
+      <section class="hero-section hero-full">
+        <img src="img/mamu_TOP_2kai5.png" alt="メイン画像" class="hero-main-img">
+        <div class="slider-box">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide"><img src="img/KUCHI_01.png" alt="口コミ1"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_02.png" alt="口コミ2"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_03.png" alt="口コミ3"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_04.png" alt="口コミ4"></div>
+              <div class="swiper-slide"><img src="img/KUCHI_05.png" alt="口コミ5"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+        <div class="hero-double-img">
+          <img src="img/KUCHIKOMI.png" alt="口コミまとめ画像">
+        </div>
+        <div class="google-review-btn-wrap">
+          <a href="https://www.google.com/search?q=真夢引越センター" target="_blank" rel="noopener" class="google-review-btn">
+            <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
+            Google口コミを見る
+          </a>
         </div>
       </section>
-    </section>
 
-    <!-- サブヒーロー・口コミスライダー -->
-    <section class="hero-section hero-full">
-      <img src="img/mamu_TOP_2kai5.png" alt="メイン画像" class="hero-main-img">
-      <div class="slider-box">
-        <div class="swiper-container">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/KUCHI_01.png" alt="口コミ1"></div>
-            <div class="swiper-slide"><img src="img/KUCHI_02.png" alt="口コミ2"></div>
-            <div class="swiper-slide"><img src="img/KUCHI_03.png" alt="口コミ3"></div>
-            <div class="swiper-slide"><img src="img/KUCHI_04.png" alt="口コミ4"></div>
-            <div class="swiper-slide"><img src="img/KUCHI_05.png" alt="口コミ5"></div>
+      <!-- カレンダー -->
+      <section class="calendar-section">
+        <h2 class="title">予約状況カレンダー</h2>
+        <div class="calendar-container" style="gap:30px;flex-wrap:wrap;">
+          <div>
+            <h3 style="text-align:center">今月</h3>
+            <div id="calendar1"></div>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div>
+            <h3 style="text-align:center">来月</h3>
+            <div id="calendar2"></div>
+          </div>
+          <div>
+            <h3 style="text-align:center">再来月</h3>
+            <div id="calendar3"></div>
+          </div>
         </div>
-      </div>
-      <div class="hero-double-img">
-        <img src="img/KUCHIKOMI.png" alt="口コミまとめ画像">
-      </div>
-      <div class="google-review-btn-wrap">
-        <a href="https://www.google.com/search?q=真夢引越センター" target="_blank" rel="noopener" class="google-review-btn">
-          <img src="img/google_logo.webp" alt="Googleロゴ" class="google-logo" />
-          Google口コミを見る
-        </a>
-      </div>
-    </section>
-
-    <!-- カレンダー -->
-    <section class="calendar-section">
-      <h2 class="title">予約状況カレンダー</h2>
-      <div class="calendar-container" style="gap:30px;flex-wrap:wrap;">
-        <div>
-          <h3 style="text-align:center">今月</h3>
-          <div id="calendar1"></div>
-        </div>
-        <div>
-          <h3 style="text-align:center">来月</h3>
-          <div id="calendar2"></div>
-        </div>
-        <div>
-          <h3 style="text-align:center">再来月</h3>
-          <div id="calendar3"></div>
-        </div>
-      </div>
-    </section>
+      </section>
 
 
 
-    <!-- 料金プラン -->
-    <section class="plan-summary">
-      <div class="container">
-        <h2>
-          <a href="plan.html" style="color: inherit; text-decoration: none; display: inline-block;">
-            料金プラン
-          </a>
-        </h2>
-        <div class="plan-summary-list plan-summary-list-3">
-          <div class="plan-summary-card">
-            <img src="img/PURAN_MINI.png" alt="ミニパック" class="plan-title-img">
-            <div class="price price-bg">
-              <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
-              <span>13,000円～</span>
+      <!-- 料金プラン -->
+      <section class="plan-summary">
+        <div class="container">
+          <h2>
+            <a href="plan.html" style="color: inherit; text-decoration: none; display: inline-block;">
+              料金プラン
+            </a>
+          </h2>
+          <div class="plan-summary-list plan-summary-list-3">
+            <div class="plan-summary-card">
+              <img src="img/PURAN_MINI.png" alt="ミニパック" class="plan-title-img">
+              <div class="price price-bg">
+                <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
+                <span>13,000円～</span>
+              </div>
+              <p>軽トラック～1.5t</p>
+              <img src="img/plan1.jpg" alt="単身パック小" class="plan-summary-img" />
+              <p class="plan-comment">
+                荷物が少なめの人にちょうどいい！<br>
+                家具家電つき物件の引越しにも◎
+              </p>
             </div>
-            <p>軽トラック～1.5t</p>
-            <img src="img/plan1.jpg" alt="単身パック小" class="plan-summary-img" />
-            <p class="plan-comment">
-              荷物が少なめの人にちょうどいい！<br>
-              家具家電つき物件の引越しにも◎
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_TANshin.png" alt="単身パック" class="plan-title-img">
-            <div class="price price-bg">
-              <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
-              <span>18,000円～</span>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_TANshin.png" alt="単身パック" class="plan-title-img">
+              <div class="price price-bg">
+                <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
+                <span>18,000円～</span>
+              </div>
+              <p>2tショート～2tロング</p>
+              <img src="img/plan2.jpg" alt="単身パック大" class="plan-summary-img" />
+              <p class="plan-comment">
+                家電とかちょっと多めでも大丈夫！<br>
+                ひとり暮らしの引越しにおすすめ！
+              </p>
             </div>
-            <p>2tショート～2tロング</p>
-            <img src="img/plan2.jpg" alt="単身パック大" class="plan-summary-img" />
-            <p class="plan-comment">
-              家電とかちょっと多めでも大丈夫！<br>
-              ひとり暮らしの引越しにおすすめ！
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_2HITO.png" alt="二人暮らしパック" class="plan-title-img">
-            <div class="price price-bg">
-              <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
-              <span>30,000円～</span>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_2HITO.png" alt="二人暮らしパック" class="plan-title-img">
+              <div class="price price-bg">
+                <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
+                <span>30,000円～</span>
+              </div>
+              <p>2tロング～3t</p>
+              <img src="img/plan3.jpg" alt="二人暮らしパック" class="plan-summary-img" />
+              <p class="plan-comment">
+                ふたり分の荷物もまとめてOK！<br>
+                カップルや新婚さんにぴったり♪
+              </p>
             </div>
-            <p>2tロング～3t</p>
-            <img src="img/plan3.jpg" alt="二人暮らしパック" class="plan-summary-img" />
-            <p class="plan-comment">
-              ふたり分の荷物もまとめてOK！<br>
-              カップルや新婚さんにぴったり♪
-            </p>
+          </div>
+          <div class="plan-summary-list plan-summary-list-2">
+            <div class="plan-summary-card">
+              <img src="img/PURAN_FAMI.png" alt="ファミリーパック" class="plan-title-img">
+              <div class="price price-bg">
+                <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
+                <span>50,000円～</span>
+              </div>
+              <p>3t～4t</p>
+              <img src="img/plan4.jpg" alt="ファミリーパック" class="plan-summary-img" />
+              <p class="plan-comment">
+                荷物が多くても安心！<br>
+                家族みんなでのお引越しにおすすめ！
+              </p>
+            </div>
+            <div class="plan-summary-card">
+              <img src="img/PURAN_CHOKYORI.png" alt="長距離パック" class="plan-title-img">
+              <div class="price price-bg">
+                <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
+                <span>66,000円～</span>
+              </div>
+              <p>3t～4t</p>
+              <img src="img/zennkoku.jpg" alt="長距離パック" class="plan-summary-img" />
+              <p class="plan-comment">
+                北海道～沖縄まで！<br>
+                　日本全国ご相談ください！
+              </p>
+            </div>
           </div>
         </div>
-        <div class="plan-summary-list plan-summary-list-2">
-          <div class="plan-summary-card">
-            <img src="img/PURAN_FAMI.png" alt="ファミリーパック" class="plan-title-img">
-            <div class="price price-bg">
-              <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
-              <span>50,000円～</span>
-            </div>
-            <p>3t～4t</p>
-            <img src="img/plan4.jpg" alt="ファミリーパック" class="plan-summary-img" />
-            <p class="plan-comment">
-              荷物が多くても安心！<br>
-              家族みんなでのお引越しにおすすめ！
-            </p>
-          </div>
-          <div class="plan-summary-card">
-            <img src="img/PURAN_CHOKYORI.png" alt="長距離パック" class="plan-title-img">
-            <div class="price price-bg">
-              <img src="img/RYOUKIN.png" alt="料金背景" class="price-bg-img">
-              <span>66,000円～</span>
-            </div>
-            <p>3t～4t</p>
-            <img src="img/zennkoku.jpg" alt="長距離パック" class="plan-summary-img" />
-            <p class="plan-comment">
-              北海道～沖縄まで！<br>
-              　日本全国ご相談ください！
-            </p>
-          </div>
+        <div class="plan-detail-btn-wrap">
+          <a href="plan.html" class="plan-detail-btn">詳しい料金プランを見る</a>
         </div>
-      </div>
-      <div class="plan-detail-btn-wrap">
-        <a href="plan.html" class="plan-detail-btn">詳しい料金プランを見る</a>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <div class="credit-card-zone">
-    <span class="credit-title">クレジットカードOK</span>
-    <img src="img/kureka.png" alt="クレジットカード各種対応" class="credit-icons">
-    <span class="credit-note">各種クレジットカードご利用いただけます</span>
-  </div>
+    <div class="credit-card-zone">
+      <span class="credit-title">クレジットカードOK</span>
+      <img src="img/kureka.png" alt="クレジットカード各種対応" class="credit-icons">
+      <span class="credit-note">各種クレジットカードご利用いただけます</span>
+    </div>
 
-  <footer class="footer">
-    <p>&copy; 2025 真夢引越センター</p>
-  </footer>
+    <footer class="footer">
+      <p>&copy; 2025 真夢引越センター</p>
+    </footer>
 
-  <script src="main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script>
-    const swiper = new Swiper('.swiper-container', {
-      loop: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      autoplay: {
-        delay: 5000,
-      },
-    });
-  </script>
-</body>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/main.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="calendar.js"></script>
+  </body>
 
 </html>
