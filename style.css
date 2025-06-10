@@ -882,7 +882,7 @@ body {
   width: 320px;
   min-width: 220px;
   max-width: 100vw;
-  height: 260px;
+  height: 350px;
   min-height: 120px;
   margin: 0;
   background: #fff7fa;
@@ -898,15 +898,6 @@ body {
   height: 100% !important;
   min-height: 0 !important;
   background: transparent;
-}
-
-/* 日枠の高さも調整（例: 36px） */
-#calendar .fc-daygrid-day {
-  height: 16px !important;
-  min-height: 16px !important;
-  max-height: 16px !important;
-  padding: 0;
-  vertical-align: middle;
 }
 
 /* スマホ対応 */
@@ -925,41 +916,6 @@ body {
   }
 }
 
-/* FullCalendar本体のデザインカスタム */
-.fc {
-  border-radius: 14px;
-  background: #fff7fa;
-  font-family: "Rounded Mplus 1c", "Noto Sans JP", sans-serif;
-}
-
-.fc .fc-toolbar-title {
-  color: #ff66a5;
-  font-weight: bold;
-  font-size: 1.4em;
-  letter-spacing: 1px;
-}
-
-.fc .fc-daygrid-day.fc-day-today {
-  background: #ffe4ef;
-  border-radius: 10px;
-}
-
-.fc .fc-daygrid-day:hover {
-  background: #ffd1e8;
-  transition: 0.2s;
-}
-
-.fc .fc-daygrid-day-number {
-  border-radius: 50%;
-  padding: 2px 0;
-  font-weight: bold;
-}
-
-.fc .fc-daygrid-day-top {
-  padding: 0.5em;
-  font-size: 1.1rem;
-  color: #333;
-}
 
 .calendar-legend {
   display: flex;
