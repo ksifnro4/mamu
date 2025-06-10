@@ -7,9 +7,8 @@
   <title>真夢引越センター｜トップページ</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <!-- FullCalendar CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.css" rel="stylesheet">
 </head>
+
 
 <body>
   <!-- 1分見積 固定ボタン -->
@@ -150,23 +149,11 @@
     <!-- カレンダー -->
     <section class="calendar-section">
       <h2 class="title">予約状況カレンダー</h2>
-      <div class="calendar-legend" style="display: flex; justify-content: center; gap: 24px; margin-bottom: 1.2em;">
-        <span style="display: flex; align-items: center; gap: 0.4em;">
-          <span
-            style="display: inline-block; width: 18px; height: 18px; background: #d3ffd3; border-radius: 4px; border: 1px solid #b2e6b2;"></span>
-          空き
-        </span>
-        <span style="display: flex; align-items: center; gap: 0.4em;">
-          <span
-            style="display: inline-block; width: 18px; height: 18px; background: #ffe0e0; border-radius: 4px; border: 1px solid #e6b2b2;"></span>
-          混雑
-        </span>
-        <span style="display: flex; align-items: center; gap: 0.4em;">
-          <span
-            style="display: inline-block; width: 18px; height: 18px; background: #fff5cc; border-radius: 4px; border: 1px solid #e6d9b2;"></span>
-          おすすめ
-        </span>
+      <div class="calendar-legend">
+        <span class="legend-item legend-akaji"><span class="legend-color"></span>赤字覚悟！</span>
+        <span class="legend-item legend-ganbaru"><span class="legend-color"></span>頑張ります！</span>
       </div>
+
       <div class="calendar-container" style="justify-content:center;">
         <div id="calendar"></div>
       </div>
@@ -281,11 +268,14 @@
     });
   </script>
 
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/multimonth/index.global.min.js"></script>
+  <!-- FullCalendar JS本体（最新版） -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js"></script>
+  <!-- FullCalendar multiMonthプラグイン -->
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/multimonth/index.global.min.js"></script>
+  <!-- PapaParse -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+  <!-- あなたのカレンダー初期化JS -->
   <script src="calendar.js"></script>
-
 
 </body>
 

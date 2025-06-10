@@ -961,6 +961,40 @@ body {
   color: #333;
 }
 
+.calendar-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 1.2em;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  font-size: 1rem;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid;
+}
+
+/* 色ごとの個別クラスで調整 */
+.legend-akaji .legend-color {
+  background: #F25C54;
+  border-color: #C24040;
+}
+
+.legend-ganbaru .legend-color {
+  background: #3788FF;
+  border-color: #2857A4;
+}
+
+
 
 
 /* ===== 料金プラン（抜粋）セクション ===== */

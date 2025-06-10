@@ -6,16 +6,25 @@ document.addEventListener('DOMContentLoaded', function () {
         header: true,
         complete: function (results) {
             var events = results.data.map(function (row) {
+                const status = row.状況 ? row.状況.trim() : '';
                 let color = '';
-                if (row.状況 === '空き') color = '#d3ffd3';
-                if (row.状況 === '混雑') color = '#ffe0e0';
-                if (row.状況 === 'おすすめ') color = '#fff5cc';
+
+                if (status === '赤字覚悟！') color = '#F25C54';      // 濃い赤
+                if (status === '頑張ります！') color = '#3788FF';    // 濃い青
+
+                // 色が無ければ表示しない
+                if (!color) return null;
+
                 return {
-                    title: '',
-                    start: row.日付,
+                    title: '', // タイトル不要なら''
+                    start: row.日付.replace(/\//g, '-'),
                     color: color,
+                    backgroundColor: color,
+                    borderColor: color,
                 };
-            });
+            }).filter(e => e !== null);
+
+
 
             // 今月、来月、再来月の年月を取得
             const now = new Date();
