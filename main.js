@@ -67,9 +67,10 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    simulateTouch: window.innerWidth <= 600, // 600px以下のみタッチ操作有効
+    simulateTouch: window.innerWidth <= 600,
     breakpoints: {
       600: {
+        allowTouchMove: false,
         slidesPerView: 1,
         spaceBetween: 20,
         centeredSlides: true,
@@ -178,3 +179,4 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(estimate);
   }
 });
+
