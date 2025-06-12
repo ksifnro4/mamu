@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 const status = row.状況 ? row.状況.trim() : '';
                 let color = '';
 
-                if (status === '赤字覚悟！') color = '#F25C54';      // 濃い赤
-                if (status === '頑張ります！') color = '#3788FF';    // 濃い青
+                if (status === '赤字覚悟！') color = '#FF4444';      // 濃い赤
+                if (status === '頑張ります！') color = '#4444FF';    // 濃い青
 
                 // 色が無ければ表示しない
                 if (!color) return null;
@@ -81,9 +81,9 @@ document.addEventListener('DOMContentLoaded', function () {
                             // 日曜は赤、土曜は青
                             const day = cellDate.getDay();
                             if (day === 0) {
-                                arg.el.style.background = "#faede1"; // 日曜: 薄い赤
+                                arg.el.style.background = "#ffe0e0"; // 日曜: 薄い赤
                             } else if (day === 6) {
-                                arg.el.style.background = "#e8f1ff"; // 土曜: 薄い青
+                                arg.el.style.background = "#e0e0ff"; // 土曜: 薄い青
                             }
                         }
                     }
