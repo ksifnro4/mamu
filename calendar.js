@@ -24,8 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 };
             }).filter(e => e !== null);
 
-
-
             // 今月、来月、再来月の年月を取得
             const now = new Date();
             const months = [
@@ -65,6 +63,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     eventDidMount: function (info) {
                         if (info.event.extendedProps.description) {
                             info.el.title = info.event.extendedProps.description;
+                        }
+                    },
+                    dayCellDidMount: function (arg) {
+                        // 今日より前の日付を灰色に
+                        const today = new Date();
+                        today.setHours(0, 0, 0, 0);
+                        const cellDate = new Date(arg.date);
+                        cellDate.setHours(0, 0, 0, 0);
+                        if (cellDate < today) {
+                            arg.el.style.background = "#e0e0e0";
                         }
                     }
                 });
