@@ -152,9 +152,15 @@
 }
 
 /* ===== 電話 ===== */
+.tel-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
 .tel-icon {
   height: 4vw;
-  max-height: 56px;
+  max-height: 50px;
   width: auto;
   display: block;
 }
