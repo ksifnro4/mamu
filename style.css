@@ -156,10 +156,11 @@
   height: 4vw;
   max-height: 56px;
   width: auto;
+  display: block;
 }
 
 .tel {
-  font-size: 1.0vw;
+  font-size: clamp(10px, 1vw, 16px);
   font-weight: bold;
   color: #333;
 }
@@ -176,14 +177,6 @@
 
 .catch {
   font-size: clamp(10px, 0.6vw, 12px);
-}
-
-.line-text {
-  font-size: clamp(10px, 1vw, 16px);
-}
-
-.tel {
-  font-size: clamp(12px, 1vw, 16px);
 }
 
 .small-text,
