@@ -66,13 +66,25 @@ document.addEventListener('DOMContentLoaded', function () {
                         }
                     },
                     dayCellDidMount: function (arg) {
+                        // 今月以外のセルは何もしない
+                        if (arg.isOther) return;
+
                         // 今日より前の日付を灰色に
                         const today = new Date();
                         today.setHours(0, 0, 0, 0);
                         const cellDate = new Date(arg.date);
                         cellDate.setHours(0, 0, 0, 0);
+
                         if (cellDate < today) {
                             arg.el.style.background = "#e0e0e0";
+                        } else {
+                            // 日曜は赤、土曜は青
+                            const day = cellDate.getDay();
+                            if (day === 0) {
+                                arg.el.style.background = "#faede1"; // 日曜: 薄い赤
+                            } else if (day === 6) {
+                                arg.el.style.background = "#e8f1ff"; // 土曜: 薄い青
+                            }
                         }
                     }
                 });
