@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             info.el.style.backgroundPosition = 'bottom';
                             info.el.style.backgroundRepeat = 'no-repeat';
                             info.el.style.opacity = '1';
-                            info.el.style.backgroundSize = '120%';
+                            info.el.style.backgroundSize = '110%';
                         }
                     },
                     dayCellDidMount: function (arg) {
