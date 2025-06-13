@@ -8,19 +8,24 @@ document.addEventListener('DOMContentLoaded', function () {
             var events = results.data.map(function (row) {
                 const status = row.状況 ? row.状況.trim() : '';
                 let color = '';
+                let image = '';
 
-                if (status === '赤字覚悟！') color = '#FF4444';      // 濃い赤
-                if (status === '頑張ります！') color = '#4444FF';    // 濃い青
+                // ステータスごとに画像パスを指定
+                if (status === '赤字覚悟！') image = 'img/kan.png';
+                if (status === '頑張ります！') image = 'img/ele.png';
 
                 // 色が無ければ表示しない
-                if (!color) return null;
+                if (!image) return null;
 
                 return {
                     title: '', // タイトル不要なら''
                     start: row.日付.replace(/\//g, '-'),
-                    color: color,
-                    backgroundColor: color,
-                    borderColor: color,
+                    display: 'background', // 背景イベントとして表示
+                    backgroundColor: 'transparent', // 背景色を透明に
+                    // FullCalendar v5/v6: backgroundImageは直接指定できないので、eventDidMountで画像を適用
+                    extendedProps: {
+                        bgImage: image
+                    }
                 };
             }).filter(e => e !== null);
 
@@ -60,9 +65,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     dayCellContent: function (arg) {
                         return arg.date.getDate();
                     },
-                    eventDidMount: function (info) {
-                        if (info.event.extendedProps.description) {
-                            info.el.title = info.event.extendedProps.description;
+                    eventDidMount: function (info) { 
+                        if (info.event.extendedProps.bgImage) {
+                            info.el.style.backgroundImage = `url('${info.event.extendedProps.bgImage}')`;
+                            info.el.style.backgroundSize = 'cover';
+                            info.el.style.backgroundPosition = 'bottom';
+                            info.el.style.backgroundRepeat = 'no-repeat';
+                            info.el.style.opacity = '1';
+                            info.el.style.backgroundSize = '120%';
                         }
                     },
                     dayCellDidMount: function (arg) {

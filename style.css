@@ -939,14 +939,19 @@ body {
 }
 
 /* 色ごとの個別クラスで調整 */
+/* 画像で凡例を表示 */
 .legend-akaji .legend-color {
-  background: #F25C54;
-  border-color: #C24040;
+  background: url("img/kan.png") center/cover no-repeat;
+  border: none;
+  width: 30px;
+  height: 30px;
 }
 
 .legend-ganbaru .legend-color {
-  background: #3788FF;
-  border-color: #2857A4;
+  background: url("img/ele.png") center/cover no-repeat;
+  border: none;
+  width: 35px;
+  height: 35px;
 }
 
 
