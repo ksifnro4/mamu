@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // ステータスごとに画像パスを指定
                 if (status === '赤字覚悟！') image = 'img/kan.png';
-                if (status === '頑張ります！') image = 'img/ele.png';
+                if (status === '頑張ります！') image = 'img/usa.png';
+                if (status === '満車') image = 'img/ele.png';
 
                 // 色が無ければ表示しない
                 if (!image) return null;

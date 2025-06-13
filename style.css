@@ -948,6 +948,13 @@ body {
 }
 
 .legend-ganbaru .legend-color {
+  background: url("img/usa.png") center/cover no-repeat;
+  border: none;
+  width: 35px;
+  height: 35px;
+}
+
+.legend-mannsya .legend-color {
   background: url("img/ele.png") center/cover no-repeat;
   border: none;
   width: 35px;
