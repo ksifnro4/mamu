@@ -62,11 +62,12 @@ document.addEventListener('DOMContentLoaded', function () {
                         center: 'title',
                         right: ''
                     },
+                    titleFormat: { month: 'long' },
                     showNonCurrentDates: false,
                     dayCellContent: function (arg) {
                         return arg.date.getDate();
                     },
-                    eventDidMount: function (info) { 
+                    eventDidMount: function (info) {
                         if (info.event.extendedProps.bgImage) {
                             info.el.style.backgroundImage = `url('${info.event.extendedProps.bgImage}')`;
                             info.el.style.backgroundSize = 'cover';
