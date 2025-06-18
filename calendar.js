@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
         complete: function (results) {
             var events = results.data.map(function (row) {
                 const status = row.状況 ? row.状況.trim() : '';
-                let color = '';
                 let image = '';
 
                 // ステータスごとに画像パスを指定
@@ -15,15 +14,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (status === '頑張ります！') image = 'img/usa.png';
                 if (status === '満車') image = 'img/ele.png';
 
-                // 色が無ければ表示しない
+                // 画像が無ければ表示しない
                 if (!image) return null;
 
                 return {
-                    title: '', // タイトル不要なら''
+                    title: '',
                     start: row.日付.replace(/\//g, '-'),
-                    display: 'background', // 背景イベントとして表示
-                    backgroundColor: 'transparent', // 背景色を透明に
-                    // FullCalendar v5/v6: backgroundImageは直接指定できないので、eventDidMountで画像を適用
+                    display: 'background',
+                    backgroundColor: 'transparent',
                     extendedProps: {
                         bgImage: image
                     }
@@ -38,22 +36,46 @@ document.addEventListener('DOMContentLoaded', function () {
                 new Date(now.getFullYear(), now.getMonth() + 2, 1)
             ];
 
-            // カレンダーを3つ並べて表示
+            // スライダー用の変数
+            let currentMonthIndex = 0;
             const calendarContainer = document.getElementById('calendar');
-            calendarContainer.innerHTML = ''; // クリア
+            let calendar;
 
-            months.forEach((date, idx) => {
-                const calDiv = document.createElement('div');
-                calDiv.id = 'calendar_' + idx;
-                calDiv.style.display = 'inline-block';
-                calDiv.style.width = '320px';
-                calDiv.style.verticalAlign = 'top';
-                calDiv.style.marginRight = '16px';
-                calendarContainer.appendChild(calDiv);
+            // スライダー用のボタンを作成
+            const sliderWrapper = document.createElement('div');
+            sliderWrapper.style.display = 'flex';
+            sliderWrapper.style.alignItems = 'center';
+            sliderWrapper.style.justifyContent = 'center';
+            sliderWrapper.style.gap = '16px';
 
-                const calendar = new FullCalendar.Calendar(calDiv, {
+            const prevBtn = document.createElement('button');
+            prevBtn.textContent = '＜';
+            prevBtn.id = 'prev-month';
+            prevBtn.style.fontSize = '1.5em';
+            prevBtn.style.padding = '0.3em 0.8em';
+
+            const nextBtn = document.createElement('button');
+            nextBtn.textContent = '＞';
+            nextBtn.id = 'next-month';
+            nextBtn.style.fontSize = '1.5em';
+            nextBtn.style.padding = '0.3em 0.8em';
+
+            const calDiv = document.createElement('div');
+            calDiv.id = 'calendar-slide';
+            calDiv.style.width = '800px';
+
+            sliderWrapper.appendChild(prevBtn);
+            sliderWrapper.appendChild(calDiv);
+            sliderWrapper.appendChild(nextBtn);
+
+            calendarContainer.innerHTML = '';
+            calendarContainer.appendChild(sliderWrapper);
+
+            function renderCalendar(monthIndex) {
+                calDiv.innerHTML = '';
+                calendar = new FullCalendar.Calendar(calDiv, {
                     initialView: 'dayGridMonth',
-                    initialDate: date,
+                    initialDate: months[monthIndex],
                     events: events,
                     locale: 'ja',
                     height: 'auto',
@@ -62,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         center: 'title',
                         right: ''
                     },
-                    titleFormat: { month: 'long' },
+                    titleFormat: { month: 'long' }, // 年を非表示、月のみ表示
                     showNonCurrentDates: false,
                     dayCellContent: function (arg) {
                         return arg.date.getDate();
@@ -74,34 +96,53 @@ document.addEventListener('DOMContentLoaded', function () {
                             info.el.style.backgroundPosition = 'bottom';
                             info.el.style.backgroundRepeat = 'no-repeat';
                             info.el.style.opacity = '1';
-                            info.el.style.backgroundSize = '110%';
+                            info.el.style.backgroundSize = '50%';
                         }
                     },
                     dayCellDidMount: function (arg) {
-                        // 今月以外のセルは何もしない
                         if (arg.isOther) return;
 
-                        // 今日より前の日付を灰色に
                         const today = new Date();
                         today.setHours(0, 0, 0, 0);
                         const cellDate = new Date(arg.date);
                         cellDate.setHours(0, 0, 0, 0);
 
+                        // まず背景色をクリア
+                        arg.el.style.background = '';
+
                         if (cellDate < today) {
-                            arg.el.style.background = "#e0e0e0";
+                            arg.el.style.backgroundColor = "#e0e0e0";
                         } else {
-                            // 日曜は赤、土曜は青
                             const day = cellDate.getDay();
                             if (day === 0) {
-                                arg.el.style.background = "#ffe0e0"; // 日曜: 薄い赤
+                                arg.el.style.backgroundColor = "#ffe0e0"; // 日曜: 薄い赤
                             } else if (day === 6) {
-                                arg.el.style.background = "#e0e0ff"; // 土曜: 薄い青
+                                arg.el.style.backgroundColor = "#e0e0ff"; // 土曜: 薄い青
+                            } else {
+                                arg.el.style.backgroundColor = ""; // 平日は色なし
                             }
                         }
                     }
                 });
                 calendar.render();
-            });
+            }
+
+            // 初期表示
+            renderCalendar(currentMonthIndex);
+
+            // ボタンで切り替え
+            prevBtn.onclick = function () {
+                if (currentMonthIndex > 0) {
+                    currentMonthIndex--;
+                    renderCalendar(currentMonthIndex);
+                }
+            };
+            nextBtn.onclick = function () {
+                if (currentMonthIndex < 2) {
+                    currentMonthIndex++;
+                    renderCalendar(currentMonthIndex);
+                }
+            };
         }
     });
 });
