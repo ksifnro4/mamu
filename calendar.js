@@ -90,23 +90,26 @@ document.addEventListener('DOMContentLoaded', function () {
                         return arg.date.getDate();
                     },
                     eventDidMount: function (info) {
-                        if (info.event.extendedProps.bgImage) {
-                            // 画像と色を同時に指定
-                            let bgColor = info.el.style.backgroundColor || info.el.style.background || "#fff";
-                            info.el.style.background = `${bgColor} url('${info.event.extendedProps.bgImage}') center bottom / 50% no-repeat`;
-                            info.el.style.opacity = '1';
-                        }
                         const today = new Date();
                         today.setHours(0, 0, 0, 0);
                         const eventDate = new Date(info.event.start);
                         eventDate.setHours(0, 0, 0, 0);
 
+                        // ステータスごとに画像サイズを指定
+                        let bgSize = "50%";
+                        const img = info.event.extendedProps.bgImage;
+                        if (img) {
+                            if (img.includes('koara')) bgSize = "60%";
+                            if (img.includes('kirin')) bgSize = "40%";
+                            if (img.includes('ele')) bgSize = "60%";
+                        }
+
                         if (eventDate <= today) {
                             // 画像を消す（背景を色だけに）
                             info.el.style.backgroundImage = 'none';
-                        } else if (info.event.extendedProps.bgImage) {
+                        } else if (img) {
                             let bgColor = info.el.style.backgroundColor || info.el.style.background || "#fff";
-                            info.el.style.background = `${bgColor} url('${info.event.extendedProps.bgImage}') center bottom / 50% no-repeat`;
+                            info.el.style.background = `${bgColor} url('${img}') center bottom / ${bgSize} no-repeat`;
                             info.el.style.opacity = '1';
                         }
                     },
