@@ -96,29 +96,54 @@ document.addEventListener('DOMContentLoaded', function () {
                             info.el.style.background = `${bgColor} url('${info.event.extendedProps.bgImage}') center bottom / 50% no-repeat`;
                             info.el.style.opacity = '1';
                         }
+                        const today = new Date();
+                        today.setHours(0, 0, 0, 0);
+                        const eventDate = new Date(info.event.start);
+                        eventDate.setHours(0, 0, 0, 0);
+
+                        if (eventDate <= today) {
+                            // 画像を消す（背景を色だけに）
+                            info.el.style.backgroundImage = 'none';
+                        } else if (info.event.extendedProps.bgImage) {
+                            let bgColor = info.el.style.backgroundColor || info.el.style.background || "#fff";
+                            info.el.style.background = `${bgColor} url('${info.event.extendedProps.bgImage}') center bottom / 50% no-repeat`;
+                            info.el.style.opacity = '1';
+                        }
                     },
                     dayCellDidMount: function (arg) {
-                        // 土日色付け（今月以外も含めて全て）
                         const cellDate = new Date(arg.date);
                         const day = cellDate.getDay();
 
-                        if (day === 0) {
-                            arg.el.style.background = "#ffe0e0";
-                        } else if (day === 6) {
-                            arg.el.style.background = "#e0e0ff";
-                        } else {
-                            arg.el.style.background = "#fff";
+                        // 今月以外（日付が入っていない欄）はグレー
+                        if (arg.isOther) {
+                            arg.el.style.background = "#e0e0e0";
+                            return;
                         }
 
-                        // 今月の過去日はグレーで上書き
-                        if (!arg.isOther) {
-                            const today = new Date();
-                            today.setHours(0, 0, 0, 0);
-                            const cellDateOnly = new Date(arg.date);
-                            cellDateOnly.setHours(0, 0, 0, 0);
-                            if (cellDateOnly < today) {
-                                arg.el.style.background = "#e0e0e0";
-                            }
+                        // 今日の日付を取得
+                        const today = new Date();
+                        today.setHours(0, 0, 0, 0);
+                        cellDate.setHours(0, 0, 0, 0);
+
+                        // 今日
+                        if (cellDate.getTime() === today.getTime()) {
+                            arg.el.style.background = "#fff9b2"; // 黄色
+                        }
+                        // 今月の過去日はグレー
+                        else if (cellDate < today) {
+                            arg.el.style.background = "#e0e0e0";
+                        }
+                        // 日曜
+                        else if (day === 0) {
+                            arg.el.style.background = "#ffe0e0";
+                        }
+                        // 土曜
+                        else if (day === 6) {
+                            arg.el.style.background = "#e0e0ff";
+                        }
+                        // 平日
+                        else {
+                            arg.el.style.background = "#fff";
                         }
                     }
                 });
