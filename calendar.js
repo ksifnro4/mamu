@@ -91,35 +91,33 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                     eventDidMount: function (info) {
                         if (info.event.extendedProps.bgImage) {
-                            info.el.style.backgroundImage = `url('${info.event.extendedProps.bgImage}')`;
-                            info.el.style.backgroundSize = 'cover';
-                            info.el.style.backgroundPosition = 'bottom';
-                            info.el.style.backgroundRepeat = 'no-repeat';
+                            // 画像と色を同時に指定
+                            let bgColor = info.el.style.backgroundColor || info.el.style.background || "#fff";
+                            info.el.style.background = `${bgColor} url('${info.event.extendedProps.bgImage}') center bottom / 50% no-repeat`;
                             info.el.style.opacity = '1';
-                            info.el.style.backgroundSize = '50%';
                         }
                     },
                     dayCellDidMount: function (arg) {
-                        if (arg.isOther) return;
-
-                        const today = new Date();
-                        today.setHours(0, 0, 0, 0);
+                        // 土日色付け（今月以外も含めて全て）
                         const cellDate = new Date(arg.date);
-                        cellDate.setHours(0, 0, 0, 0);
+                        const day = cellDate.getDay();
 
-                        // まず背景色をクリア
-                        arg.el.style.background = '';
-
-                        if (cellDate < today) {
-                            arg.el.style.backgroundColor = "#e0e0e0";
+                        if (day === 0) {
+                            arg.el.style.background = "#ffe0e0";
+                        } else if (day === 6) {
+                            arg.el.style.background = "#e0e0ff";
                         } else {
-                            const day = cellDate.getDay();
-                            if (day === 0) {
-                                arg.el.style.backgroundColor = "#ffe0e0"; // 日曜: 薄い赤
-                            } else if (day === 6) {
-                                arg.el.style.backgroundColor = "#e0e0ff"; // 土曜: 薄い青
-                            } else {
-                                arg.el.style.backgroundColor = ""; // 平日は色なし
+                            arg.el.style.background = "#fff";
+                        }
+
+                        // 今月の過去日はグレーで上書き
+                        if (!arg.isOther) {
+                            const today = new Date();
+                            today.setHours(0, 0, 0, 0);
+                            const cellDateOnly = new Date(arg.date);
+                            cellDateOnly.setHours(0, 0, 0, 0);
+                            if (cellDateOnly < today) {
+                                arg.el.style.background = "#e0e0e0";
                             }
                         }
                     }
