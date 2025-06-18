@@ -114,12 +114,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         const cellDate = new Date(arg.date);
                         const day = cellDate.getDay();
 
-                        // 今月以外（日付が入っていない欄）はグレー
-                        if (arg.isOther) {
-                            arg.el.style.background = "#e0e0e0";
-                            return;
-                        }
-
                         // 今日の日付を取得
                         const today = new Date();
                         today.setHours(0, 0, 0, 0);
