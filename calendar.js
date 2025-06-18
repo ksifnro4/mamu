@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 let image = '';
 
                 // ステータスごとに画像パスを指定
-                if (status === '赤字覚悟！') image = 'img/kan.png';
-                if (status === '頑張ります！') image = 'img/usa.png';
+                if (status === '赤字覚悟！') image = 'img/koara.png';
+                if (status === '頑張ります！') image = 'img/kirin.png';
                 if (status === '満車') image = 'img/ele.png';
 
                 // 画像が無ければ表示しない
@@ -123,9 +123,18 @@ document.addEventListener('DOMContentLoaded', function () {
                         if (cellDate.getTime() === today.getTime()) {
                             arg.el.style.background = "#fff9b2"; // 黄色
                         }
-                        // 今月の過去日はグレー
+                        // 今月の過去日は赤斜線
                         else if (cellDate < today) {
-                            arg.el.style.background = "#e0e0e0";
+                            // 土日色を判定
+                            if (day === 0) {
+                                arg.el.style.backgroundColor = "#ffe0e0"; // 日曜: 薄い赤
+                            } else if (day === 6) {
+                                arg.el.style.backgroundColor = "#e0e0ff"; // 土曜: 薄い青
+                            } else {
+                                arg.el.style.backgroundColor = "#fff";    // 平日: 白
+                            }
+                            // 赤斜線を重ねる
+                            arg.el.style.backgroundImage = "linear-gradient(146deg, transparent 48%, #ff6b6b 50%, #ff6b6b 52%, transparent 54%)";
                         }
                         // 日曜
                         else if (day === 0) {
