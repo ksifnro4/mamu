@@ -35,8 +35,8 @@
   }
 
   .fixed-bottom-link {
-    right: 30px;
-    bottom: 30px;
+    right: 0px;
+    bottom: 20px;
   }
 }
 
@@ -904,6 +904,17 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 24px;
+  }
+
+  #prev-month,
+  #next-month {
+    min-width: 20px;
+    width: 20px;
+    font-size: 1em;
+    padding-left: 0.1em;
+    padding-right: 0.1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
   }
 }
 

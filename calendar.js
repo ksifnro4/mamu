@@ -51,14 +51,38 @@ document.addEventListener('DOMContentLoaded', function () {
             const prevBtn = document.createElement('button');
             prevBtn.textContent = '＜';
             prevBtn.id = 'prev-month';
-            prevBtn.style.fontSize = '1.5em';
-            prevBtn.style.padding = '0.3em 0.8em';
 
             const nextBtn = document.createElement('button');
             nextBtn.textContent = '＞';
             nextBtn.id = 'next-month';
-            nextBtn.style.fontSize = '1.5em';
-            nextBtn.style.padding = '0.3em 0.8em';
+
+            // ボタンサイズを画面幅で切り替え
+            function setButtonSize() {
+                if (window.innerWidth <= 600) {
+                    prevBtn.style.fontSize = '1em';
+                    prevBtn.style.padding = '0.1em 0.3em';
+                    prevBtn.style.minWidth = '20px';
+                    prevBtn.style.width = '20px';
+
+                    nextBtn.style.fontSize = '1em';
+                    nextBtn.style.padding = '0.1em 0.3em';
+                    nextBtn.style.minWidth = '20px';
+                    nextBtn.style.width = '20px';
+                } else {
+                    prevBtn.style.fontSize = '1.5em';
+                    prevBtn.style.padding = '0.3em 0.8em';
+                    prevBtn.style.minWidth = '';
+                    prevBtn.style.width = '';
+
+                    nextBtn.style.fontSize = '1.5em';
+                    nextBtn.style.padding = '0.3em 0.8em';
+                    nextBtn.style.minWidth = '';
+                    nextBtn.style.width = '';
+                }
+            }
+            setButtonSize();
+            window.addEventListener('resize', setButtonSize);
+
 
             const calDiv = document.createElement('div');
             calDiv.id = 'calendar-slide';
@@ -70,6 +94,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             calendarContainer.innerHTML = '';
             calendarContainer.appendChild(sliderWrapper);
+
 
             function renderCalendar(monthIndex) {
                 calDiv.innerHTML = '';
