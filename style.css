@@ -893,11 +893,10 @@ body {
 }
 
 /* スマホ対応 */
-@media (max-width: 1100px) {
+@media (max-width: 600px) {
   #calendar>div {
     width: 96vw;
     min-width: 0;
-    height: 320px;
     margin-bottom: 24px;
   }
 
