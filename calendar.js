@@ -10,9 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 let image = '';
 
                 // ステータスごとに画像パスを指定
-                if (status === '赤字覚悟！') image = 'img/koara.png';
-                if (status === '頑張ります！') image = 'img/kirin.png';
-                if (status === '満車') image = 'img/ele.png';
+                if (status === '通常') image = 'img/koara.png';
+                if (status === '要相談') image = 'img/kirin.png';
+                if (status === '残り僅か。。。') image = 'img/ele.png';
 
                 // 画像が無ければ表示しない
                 if (!image) return null;
