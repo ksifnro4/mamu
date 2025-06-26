@@ -110,12 +110,13 @@ textarea {
 .submit-btn:hover {
     background-color: #45a049;
 }
-
+/*
 .form-note {
     margin-top: 15px;
     font-size: 0.9em;
     color: #666;
 }
+
 
 .contact-card {
     background: linear-gradient(120deg, #f8e8f0 0%, #e0fbe8 100%);
@@ -125,3 +126,4 @@ textarea {
     margin: 2em auto;
     max-width: 1200px;
 }
+    */
