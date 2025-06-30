@@ -368,151 +368,6 @@
 
 /* ===== HEROセクション ===== */
 
-.hero-img-stack {
-  position: relative;
-  width: 1200px;
-  height: 800px;
-  margin: 0 auto;
-}
-
-.hero-img-bg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-}
-
-.hero-img-row {
-  position: absolute;
-  left: 50%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1em;
-  z-index: 2;
-  transform: translateX(-50%);
-}
-
-.row-1 {
-  top: 15%;
-  width: 350px;
-}
-
-.row-1 .hero-img {
-  opacity: 0;
-  transform: scale(0.3);
-  transition: opacity 0.4s cubic-bezier(.4, 0, .2, 1), transform 1.2s cubic-bezier(.4, 0, .2, 1);
-}
-
-.row-1 .hero-img.is-visible {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.row-2 {
-  top: 30%;
-  width: 600px;
-}
-
-.row-3 {
-  top: 45%;
-  width: 600px;
-}
-
-.row-4 {
-  top: 60%;
-  width: 250px;
-}
-
-.row-4 .hero-img {
-  opacity: 0;
-  transform: translateY(180px) scale(0.4);
-  transition: opacity 0.8s cubic-bezier(.4, 0, .2, 1)0.3s, transform 1.2s cubic-bezier(.4, 0, .2, 1)0.3s;
-}
-
-.row-4 .hero-img.is-visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.hero-img {
-  width: 350px;
-  opacity: 0;
-  transform: scale(0.8) translateY(40px);
-  transition: opacity 1s cubic-bezier(.4, 0, .2, 1), transform 1s cubic-bezier(.4, 0, .2, 1);
-}
-
-
-.hero-img.is-visible {
-  opacity: 1;
-  transform: scale(1) translateY(0);
-}
-
-@media screen and (max-width: 600px) {
-
-  .hero-img-stack {
-    width: 100vw;
-    height: 120vw;
-    min-width: 0;
-    min-height: 0;
-  }
-
-  .hero-img-bg {
-    width: 100%;
-    height: 100%;
-  }
-
-  .hero-img-row {
-    width: 100vw;
-    gap: 2vw;
-  }
-
-  .row-1,
-  .row-2,
-  .row-3,
-  .row-4 {
-    width: 100vw;
-  }
-
-  .row-1 {
-    top: 10%;
-  }
-
-  .row-2 {
-    top: 25%;
-  }
-
-  .row-3 {
-    top: 40%;
-  }
-
-  .row-4 {
-    top: 70%;
-  }
-
-  .row-1 .hero-img {
-    width: 45vw;
-  }
-
-  .row-2 .hero-img {
-    width: 80vw;
-  }
-
-  .row-3 .hero-img {
-    width: 90vw;
-  }
-
-  .row-4 .hero-img {
-    width: 30vw;
-  }
-}
-
-
-
 html,
 body {
   margin: 0;
@@ -520,6 +375,62 @@ body {
   box-sizing: border-box;
   overflow-x: hidden;
 }
+
+.hero-swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 320px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.hero-swiper .swiper-slide-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hero-swiper .swiper-slide img,
+.hero-img,
+.hero-img-bg {
+  width: 1200px;
+  max-width: 1800px;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+  .hero-swiper {
+    max-width: 100vw;
+    margin-top: -100px;
+  }
+
+  .hero-swiper .swiper-slide img,
+  .hero-img,
+  .hero-img-bg {
+    width: 100vw;
+    max-width: 100vw;
+    object-fit: cover;
+    border-radius: 0;
+    padding-top: 60px;
+  }
+
+  .hero-swiper .swiper-button-prev,
+  .hero-swiper .swiper-button-next {
+    display: none;
+  }
+
+}
+
 
 /* bodyの上余白を調整（ヘッダー＋ナビバーの高さ分） */
 body {
@@ -529,8 +440,6 @@ body {
   background-attachment: fixed;
   padding-top: 100px;
 }
-
-
 
 
 .hero-section {
@@ -570,7 +479,7 @@ body {
 
 
 .slider-box {
-  width: 900px;
+  width: 1200px;
   max-width: 95vw;
   margin: 0 auto 32px auto;
   background: #fff;
@@ -580,17 +489,7 @@ body {
   position: relative;
 }
 
-.swiper-container {
-  width: 100%;
-  /* ここを100%に */
-  max-width: 900px;
-  /* 親と同じに */
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-
-.swiper-slide img {
+.review-swiper .swiper-slide img {
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -602,7 +501,7 @@ body {
     transform 2.5s cubic-bezier(.4, 0, .2, 1);
 }
 
-.swiper-slide-active img {
+.review-swiper .swiper-slide-active img {
   opacity: 1;
   transform: scale(1);
 }
@@ -619,7 +518,7 @@ body {
     position: relative;
   }
 
-  .swiper-container {
+  .review-swiper {
     width: 100vw;
     height: 35vw;
     max-width: 100vw;
@@ -630,7 +529,7 @@ body {
     top: 0;
   }
 
-  .swiper-slide img {
+  .review-swiper .swiper-slide img {
     width: 100vw;
     height: 35vw;
     object-fit: cover;
@@ -639,14 +538,13 @@ body {
   }
 }
 
-
-.swiper-slide {
+.review-swiper .swiper-slide {
   opacity: 0;
   transition: opacity 0.3s;
   pointer-events: none;
 }
 
-.swiper-slide-active {
+.review-swiper .swiper-slide-active {
   opacity: 1;
   pointer-events: auto;
 }
