@@ -36,19 +36,21 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-container', {
     loop: true,
     slidesPerView: 1,
-    centeredSlides: true,
-    spaceBetween: 20,
+    centeredSlides: false,
+    spaceBetween: 0,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
     simulateTouch: window.innerWidth <= 600,
+    allowTouchMove: false,
+    simulateTouch: false,
     breakpoints: {
       600: {
         allowTouchMove: false,
         slidesPerView: 1,
-        spaceBetween: 20,
-        centeredSlides: true,
+        spaceBetween: 0,
+        centeredSlides: false,
         simulateTouch: false,
       }
     }

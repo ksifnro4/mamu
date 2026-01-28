@@ -19,7 +19,7 @@
 }
 
 .fixed-bottom-link img {
-  width: 250px;
+  width: 200px;
   height: auto;
   display: block;
 }
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 600px) {
   .fixed-bottom-link img {
-    width: 150px;
+    width: 120px;
   }
 
   .fixed-bottom-link {
@@ -378,7 +378,7 @@ body {
 
 .hero-swiper {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -387,21 +387,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 320px;
-  opacity: 0;
   transition: opacity 0.3s;
-  pointer-events: none;
-}
-
-.hero-swiper .swiper-slide-active {
-  opacity: 1;
-  pointer-events: auto;
 }
 
 .hero-swiper .swiper-slide img,
 .hero-img,
 .hero-img-bg {
-  width: 1200px;
-  max-width: 1800px;
+  width: 100%;
+  max-width: 1200px;
   height: auto;
   border-radius: 16px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);

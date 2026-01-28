@@ -110,20 +110,3 @@ textarea {
 .submit-btn:hover {
     background-color: #45a049;
 }
-/*
-.form-note {
-    margin-top: 15px;
-    font-size: 0.9em;
-    color: #666;
-}
-
-
-.contact-card {
-    background: linear-gradient(120deg, #f8e8f0 0%, #e0fbe8 100%);
-    border-radius: 1.5em;
-    box-shadow: 0 4px 24px rgba(228, 143, 177, 0.10);
-    padding: 2em 1.5em;
-    margin: 2em auto;
-    max-width: 1200px;
-}
-    */
