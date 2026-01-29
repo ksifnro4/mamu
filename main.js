@@ -42,16 +42,12 @@ document.addEventListener('DOMContentLoaded', function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    simulateTouch: window.innerWidth <= 600,
-    allowTouchMove: false,
-    simulateTouch: false,
+    allowTouchMove: true,
+    simulateTouch: true,
     breakpoints: {
       600: {
-        allowTouchMove: false,
-        slidesPerView: 1,
-        spaceBetween: 0,
-        centeredSlides: false,
-        simulateTouch: false,
+        allowTouchMove: true,
+        simulateTouch: true,
       }
     }
   });
